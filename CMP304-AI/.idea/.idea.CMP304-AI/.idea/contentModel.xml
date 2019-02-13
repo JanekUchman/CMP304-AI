@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Neural Net" t="Include">
+            <e p="Antenna.cs" t="Include" />
             <e p="NeuralNet.cs" t="Include" />
             <e p="NeuralNode.cs" t="Include" />
           </e>
