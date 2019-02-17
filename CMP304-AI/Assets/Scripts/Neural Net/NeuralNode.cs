@@ -51,7 +51,7 @@ public class NeuralNode : MonoBehaviour
 	//Get the last nodes output and weighting, sum it to ours
 	private void SumInput(NeuralNodeConnection nodeConnection)
 	{
-		output += nodeConnection.inputNode.output * nodeConnection.weighting;
+		output += nodeConnection.inputNode.output * nodeConnection.weight;
 	}
 
 	//Switch between different types of activation functions
@@ -88,7 +88,7 @@ public class NeuralNode : MonoBehaviour
 	public class NeuralNodeConnection
 	{
 		[HideInInspector]
-		public float weighting;
+		public float weight;
 		public NeuralNode inputNode;
 	}
 }

@@ -11,7 +11,8 @@ public class CarMovement : MonoBehaviour {
 	private enum ControlState
 	{
 		HUMAN,
-		NEURAL
+		NEURAL,
+		CRASHED
 	}
 	#endregion
 	#region SetInInspector
@@ -27,7 +28,7 @@ public class CarMovement : MonoBehaviour {
 
 	private NeuralNet neuralNet;
 	private List<float> neuralNetOutputs = new List<float>();
-	public delegate void CrashedWall(NeuralNet crashedCarNet);
+	public delegate void CrashedWall();
 	public static CrashedWall CrashedWallHandler;
 	
 	
@@ -35,6 +36,7 @@ public class CarMovement : MonoBehaviour {
 	private void Start()
 	{
 		neuralNet = GetComponentInChildren<NeuralNet>();
+		SimulationController.SimulationRestartedHandler += () => controlState = ControlState.NEURAL;
 	}
 
 	void Update ()
@@ -49,6 +51,8 @@ public class CarMovement : MonoBehaviour {
 				case ControlState.NEURAL:
 					GetNeuralValues();
 					HandleNeuralInput();
+					break;
+				case ControlState.CRASHED:
 					break;
 		}
 	}
@@ -79,7 +83,7 @@ public class CarMovement : MonoBehaviour {
 	private void CrashedIntoWall()
 	{
 		SceneManager.LoadScene(0);
-		if (CrashedWallHandler != null) CrashedWallHandler.Invoke(neuralNet);
+		if (CrashedWallHandler != null) CrashedWallHandler.Invoke();
 	}
 
 	private void HandleInput()

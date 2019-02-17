@@ -4,34 +4,56 @@ using UnityEngine;
 
 public class SimulationController : MonoBehaviour {
 
-	public static SimulationController instance;
+	[SerializeField] private GameObject spawnPoint;
+	[SerializeField] private GameObject carPrefab;
+	[SerializeField] private int numberOfCarsToSpawn;
+	private List<GameObject> cars = new List<GameObject>();
+	private GenerationalMutator generationalMutator;
 
-	[SerializeField] 
-	private int simulationSpeed;
+	private int numberOfCarsCrashed;
 
-	public int SimulationSpeed
-	{
-		get { return simulationSpeed; }
-		set
-		{
-			simulationSpeed = value;
-			Application.targetFrameRate = value;
-		}
-	}
-
+	public delegate void SimulationRestarted();
+	public static SimulationRestarted SimulationRestartedHandler;
 	// Use this for initialization
 	void Start ()
 	{
-		//Set up the singleton
-		if (instance == null) instance = this;
-		else DestroyImmediate(this);
-
+		generationalMutator = FindObjectOfType<GenerationalMutator>();
 		QualitySettings.vSyncCount = 0;
-		Application.targetFrameRate = simulationSpeed;
+		SpawnCars();
+		generationalMutator.Evolve(firstGeneration: true);
+		CarMovement.CrashedWallHandler += OnCarCrash;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	private void OnCarCrash()
+	{
+		numberOfCarsCrashed++;
+		if (numberOfCarsCrashed == numberOfCarsToSpawn)
+		{
+			ResetSimulation();
+		}
+	}
+
+	private void ResetSimulation()
+	{
+		numberOfCarsCrashed = 0;
+		ResetCars();
+		if (SimulationRestartedHandler != null) SimulationRestartedHandler.Invoke();
+	}
+
+	private void ResetCars()
+	{
+		foreach (var car in cars)
+		{
+			car.transform.position = spawnPoint.transform.position;
+			car.transform.rotation = spawnPoint.transform.rotation;
+		}
+	}
+
+	private void SpawnCars()
+	{
+		for (int i = 0; i < numberOfCarsToSpawn; i++)
+		{
+			cars.Add(Instantiate(carPrefab, spawnPoint.transform));
+		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class NeuralNet : MonoBehaviour {
@@ -39,6 +40,59 @@ public class NeuralNet : MonoBehaviour {
 		}
 
 		return outputValues;
+	}
+
+	public Queue<float> ExtractChromosome()
+	{
+		Queue<float> chromosome = new Queue<float>();
+		for (int i = 1; i < layers.Length; i ++) 
+		{
+			foreach (var node in layers[i].nodes)
+			{
+				//Extract the bias gene
+				chromosome.Enqueue(node.bias);
+				//Extract each weighting gene
+				foreach (var nodeConnection in node.inputConnections)
+				{
+					chromosome.Enqueue(nodeConnection.weight);
+				}
+			}
+		}
+
+		return chromosome;
+	}
+
+	public void ApplyChromosome(Queue<float> chromosome)
+	{
+		for (int i = 1; i < layers.Length; i ++) 
+		{
+			foreach (var node in layers[i].nodes)
+			{
+				//Extract the bias gene
+				node.bias = chromosome.Dequeue();
+				//Extract each weighting gene
+				foreach (var nodeConnection in node.inputConnections)
+				{
+					nodeConnection.weight = chromosome.Dequeue();
+				}
+			}
+		}
+	}
+
+	public int GetChromosomeLength()
+	{
+		int count = 0;
+		for (int i = 1; i < layers.Length; i ++) 
+		{
+			//There's a gene on each node for bias
+			count+= layers[i].nodes.Length;
+			//And there's a gene for the weight of each connection
+			foreach (var node in layers[i].nodes)
+			{
+				count += node.inputConnections.Length;
+			}
+		}
+		return count;
 	}
 	
 	[System.Serializable]
