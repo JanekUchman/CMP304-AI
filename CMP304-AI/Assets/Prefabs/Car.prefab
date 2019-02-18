@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4547755566977712}
   - component: {fileID: 114540194687016724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Steering Output
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4570169055673678}
   - component: {fileID: 114211408774075508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Input Node Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4197097990628496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Antennas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4308476758095652}
   - component: {fileID: 114106674439967556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4547458446483894}
   - component: {fileID: 114624705421116064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middle Hidden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4616551518601910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Inputs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 65706001928296488}
   - component: {fileID: 114085334125189594}
   - component: {fileID: 54055794276588088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Car
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4946042681669496}
   - component: {fileID: 114997328427959298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Front Right Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4006055316439996}
   - component: {fileID: 114581396034970852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4965489424348096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Output Layer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4390409731626858}
   - component: {fileID: 114343063310726662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Acceleration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4582779455850328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2nd Hidden Layer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4145880992845452}
   - component: {fileID: 114505416948851606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top Hidden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4529079465052740}
   - component: {fileID: 114108955098798874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Input Node Front Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4985586548450806}
   - component: {fileID: 114055312190396922}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left Steering
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4802426181048672}
   - component: {fileID: 114027131075135272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Front Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4696740671136586}
   - component: {fileID: 114290321317507460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2nd Bottom Hidden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4251753695906618}
   - component: {fileID: 114570304041734878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Acceleration Output
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4358797373602850}
   - component: {fileID: 114961967131483598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Input Node Front Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4082873401303714}
   - component: {fileID: 114791495232161812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Input Node Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4457285180733686}
   - component: {fileID: 114833126940969710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right Steering
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4058786212794394}
   - component: {fileID: 114270683089898040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2nd Top Hidden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4338591941505434}
   - component: {fileID: 114574760767763202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Input Node Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4744877411055478}
   - component: {fileID: 114703495535226286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Front Left Antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4236597281521658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1st Hidden Layer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,7 +419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4395361282972540}
   - component: {fileID: 114924755194349628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NeuralNet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,7 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4071119480505674}
   - component: {fileID: 114104696135515210}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bottom Hidden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1270850783552846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.6, y: -5.832, z: -51.34}
+  m_LocalPosition: {x: 39.6, y: 0, z: -51.34}
   m_LocalScale: {x: 0.6, y: 0.52, z: 1}
   m_Children:
   - {fileID: 4395361282972540}
@@ -911,7 +911,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c63668492e1d6499e459cbb33a690e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputConnections: []
+  inputConnections:
+  - weight: 0
+    inputNode: {fileID: 114505416948851606}
+  - weight: 0
+    inputNode: {fileID: 114270683089898040}
+  - weight: 0
+    inputNode: {fileID: 114624705421116064}
+  - weight: 0
+    inputNode: {fileID: 114290321317507460}
+  - weight: 0
+    inputNode: {fileID: 114104696135515210}
   bias: 0
 --- !u!114 &114085334125189594
 MonoBehaviour:
@@ -924,18 +934,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e15485c17272cd418834d5d2d151f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlState: 0
+  controlState: 1
   moveSpeed: 0.1
-  turnSpeed: 1
-  accelerationSpeed: 0.01
+  turnSpeed: 150
+  accelerationSpeed: 100
   minSpeed: 0.05
   maxSpeed: 0.15
   antennas:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 114581396034970852}
+  - {fileID: 114703495535226286}
+  - {fileID: 114027131075135272}
+  - {fileID: 114997328427959298}
+  - {fileID: 114106674439967556}
 --- !u!114 &114104696135515210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -947,7 +957,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c63668492e1d6499e459cbb33a690e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputConnections: []
+  inputConnections:
+  - weight: 0
+    inputNode: {fileID: 114791495232161812}
+  - weight: 0
+    inputNode: {fileID: 114961967131483598}
+  - weight: 0
+    inputNode: {fileID: 114211408774075508}
+  - weight: 0
+    inputNode: {fileID: 114108955098798874}
+  - weight: 0
+    inputNode: {fileID: 114574760767763202}
+  - weight: 0
+    inputNode: {fileID: 114343063310726662}
   bias: 0
 --- !u!114 &114106674439967556
 MonoBehaviour:
@@ -998,7 +1020,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c63668492e1d6499e459cbb33a690e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputConnections: []
+  inputConnections:
+  - weight: 0
+    inputNode: {fileID: 114791495232161812}
+  - weight: 0
+    inputNode: {fileID: 114961967131483598}
+  - weight: 0
+    inputNode: {fileID: 114211408774075508}
+  - weight: 0
+    inputNode: {fileID: 114108955098798874}
+  - weight: 0
+    inputNode: {fileID: 114574760767763202}
+  - weight: 0
+    inputNode: {fileID: 114343063310726662}
   bias: 0
 --- !u!114 &114290321317507460
 MonoBehaviour:
@@ -1011,7 +1045,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c63668492e1d6499e459cbb33a690e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputConnections: []
+  inputConnections:
+  - weight: 0
+    inputNode: {fileID: 114791495232161812}
+  - weight: 0
+    inputNode: {fileID: 114961967131483598}
+  - weight: 0
+    inputNode: {fileID: 114211408774075508}
+  - weight: 0
+    inputNode: {fileID: 114108955098798874}
+  - weight: 0
+    inputNode: {fileID: 114574760767763202}
+  - weight: 0
+    inputNode: {fileID: 114343063310726662}
   bias: 0
 --- !u!114 &114343063310726662
 MonoBehaviour:
@@ -1037,7 +1083,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c63668492e1d6499e459cbb33a690e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputConnections: []
+  inputConnections:
+  - weight: 0
+    inputNode: {fileID: 114791495232161812}
+  - weight: 0
+    inputNode: {fileID: 114961967131483598}
+  - weight: 0
+    inputNode: {fileID: 114211408774075508}
+  - weight: 0
+    inputNode: {fileID: 114108955098798874}
+  - weight: 0
+    inputNode: {fileID: 114574760767763202}
+  - weight: 0
+    inputNode: {fileID: 114343063310726662}
   bias: 0
 --- !u!114 &114540194687016724
 MonoBehaviour:
@@ -1050,7 +1108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c63668492e1d6499e459cbb33a690e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputConnections: []
+  inputConnections:
+  - weight: 0
+    inputNode: {fileID: 114055312190396922}
+  - weight: 0
+    inputNode: {fileID: 114833126940969710}
   bias: 0
 --- !u!114 &114570304041734878
 MonoBehaviour:
@@ -1063,7 +1125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c63668492e1d6499e459cbb33a690e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputConnections: []
+  inputConnections:
+  - weight: 0
+    inputNode: {fileID: 114055312190396922}
+  - weight: 0
+    inputNode: {fileID: 114833126940969710}
   bias: 0
 --- !u!114 &114574760767763202
 MonoBehaviour:
@@ -1101,7 +1167,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c63668492e1d6499e459cbb33a690e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputConnections: []
+  inputConnections:
+  - weight: 0
+    inputNode: {fileID: 114791495232161812}
+  - weight: 0
+    inputNode: {fileID: 114961967131483598}
+  - weight: 0
+    inputNode: {fileID: 114211408774075508}
+  - weight: 0
+    inputNode: {fileID: 114108955098798874}
+  - weight: 0
+    inputNode: {fileID: 114574760767763202}
+  - weight: 0
+    inputNode: {fileID: 114343063310726662}
   bias: 0
 --- !u!114 &114703495535226286
 MonoBehaviour:
@@ -1139,7 +1217,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c63668492e1d6499e459cbb33a690e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputConnections: []
+  inputConnections:
+  - weight: 0
+    inputNode: {fileID: 114505416948851606}
+  - weight: 0
+    inputNode: {fileID: 114270683089898040}
+  - weight: 0
+    inputNode: {fileID: 114624705421116064}
+  - weight: 0
+    inputNode: {fileID: 114290321317507460}
+  - weight: 0
+    inputNode: {fileID: 114104696135515210}
   bias: 0
 --- !u!114 &114924755194349628
 MonoBehaviour:
@@ -1153,7 +1241,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationFunctionType: 1
-  layers: []
+  layers:
+  - nodes:
+    - {fileID: 114791495232161812}
+    - {fileID: 114961967131483598}
+    - {fileID: 114211408774075508}
+    - {fileID: 114108955098798874}
+    - {fileID: 114574760767763202}
+    - {fileID: 114343063310726662}
+  - nodes:
+    - {fileID: 114505416948851606}
+    - {fileID: 114270683089898040}
+    - {fileID: 114624705421116064}
+    - {fileID: 114290321317507460}
+    - {fileID: 114104696135515210}
+  - nodes:
+    - {fileID: 114055312190396922}
+    - {fileID: 114833126940969710}
+  - nodes:
+    - {fileID: 114540194687016724}
+    - {fileID: 114570304041734878}
   fitness: 0
 --- !u!114 &114961967131483598
 MonoBehaviour:

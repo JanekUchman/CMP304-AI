@@ -18,17 +18,19 @@ public class SimulationController : MonoBehaviour {
 	void Start ()
 	{
 		generationalMutator = FindObjectOfType<GenerationalMutator>();
-		QualitySettings.vSyncCount = 0;
 		SpawnCars();
-		generationalMutator.Evolve(firstGeneration: true);
+		StartCoroutine(generationalMutator.Evolve(firstGeneration: true));
 		CarMovement.CrashedWallHandler += OnCarCrash;
 	}
 
 	private void OnCarCrash()
 	{
+
 		numberOfCarsCrashed++;
+		Debug.Log(numberOfCarsCrashed);
 		if (numberOfCarsCrashed == numberOfCarsToSpawn)
 		{
+			Debug.Log("Reset sim");
 			ResetSimulation();
 		}
 	}
@@ -37,8 +39,8 @@ public class SimulationController : MonoBehaviour {
 	{
 		numberOfCarsCrashed = 0;
 		ResetCars();
-		if (SimulationRestartedHandler != null) SimulationRestartedHandler.Invoke();
 		generationalMutator.Evolve();
+		if (SimulationRestartedHandler != null) SimulationRestartedHandler.Invoke();
 	}
 
 	private void ResetCars()
@@ -54,7 +56,7 @@ public class SimulationController : MonoBehaviour {
 	{
 		for (int i = 0; i < numberOfCarsToSpawn; i++)
 		{
-			cars.Add(Instantiate(carPrefab, spawnPoint.transform));
+			cars.Add(Instantiate(carPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation));
 		}
 	}
 }

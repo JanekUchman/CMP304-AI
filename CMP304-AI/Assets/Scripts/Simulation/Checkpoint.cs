@@ -15,6 +15,7 @@ public class Checkpoint : MonoBehaviour {
 		{
 			float fitness = other.gameObject.GetComponentInChildren<NeuralNet>().fitness += fitnessValue;
 			if (CheckpointHitHandler != null) CheckpointHitHandler.Invoke(fitness);
+			Debug.Log("Hit");
 		}
 	}
 }

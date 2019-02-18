@@ -30,25 +30,31 @@ public class CarMovement : MonoBehaviour {
 	private List<float> neuralNetOutputs = new List<float>();
 	public delegate void CrashedWall();
 	public static CrashedWall CrashedWallHandler;
-	
-	
+
+	private void Awake()
+	{
+		Physics.IgnoreLayerCollision(8, 8);
+	}
+
 	// Update is called once per frame
 	private void Start()
 	{
 		neuralNet = GetComponentInChildren<NeuralNet>();
-		SimulationController.SimulationRestartedHandler += () => controlState = ControlState.NEURAL;
+		//SimulationController.SimulationRestartedHandler += () => controlState = ControlState.NEURAL;
+		
 	}
 
 	void Update ()
 	{
-		transform.position += transform.forward * moveSpeed;
 
 		switch (controlState)
 		{
 				case ControlState.HUMAN:
+					transform.position += transform.forward * moveSpeed;
 					HandleInput();
 					break;
 				case ControlState.NEURAL:
+					transform.position += transform.forward * moveSpeed;
 					GetNeuralValues();
 					HandleNeuralInput();
 					break;
@@ -77,13 +83,17 @@ public class CarMovement : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		CrashedIntoWall();
+		if (other.CompareTag("Wall"))
+			CrashedIntoWall();
 	}
 
 	private void CrashedIntoWall()
 	{
-		SceneManager.LoadScene(0);
-		if (CrashedWallHandler != null) CrashedWallHandler.Invoke();
+		if (controlState != ControlState.CRASHED && CrashedWallHandler != null)
+		{
+			CrashedWallHandler.Invoke();
+			controlState = ControlState.CRASHED;
+		}
 	}
 
 	private void HandleInput()
@@ -94,7 +104,7 @@ public class CarMovement : MonoBehaviour {
 
 	private void AdjustSpeed(float inputValue)
 	{
-		float speedChange = inputValue * accelerationSpeed;
+		float speedChange = inputValue * accelerationSpeed * Time.deltaTime;
 		if (moveSpeed + speedChange < minSpeed)
 		{
 			moveSpeed = minSpeed;
@@ -113,6 +123,6 @@ public class CarMovement : MonoBehaviour {
 
 	private void AdjustSteering(float inputValue)
 	{
-		transform.Rotate(0, inputValue*turnSpeed, 0);
+		transform.Rotate(0, inputValue*turnSpeed*Time.deltaTime, 0);
 	}
 }
