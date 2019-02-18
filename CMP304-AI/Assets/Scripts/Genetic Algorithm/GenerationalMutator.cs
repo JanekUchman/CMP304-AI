@@ -20,7 +20,7 @@ public class GenerationalMutator : MonoBehaviour
 
 	private void Start()
 	{
-		SimulationController.SimulationRestartedHandler += () => Evolve();
+		
 	}
 
 	private void SetIndividuals()
@@ -132,7 +132,7 @@ public class GenerationalMutator : MonoBehaviour
 	{
 		List<NeuralNet> fittestGenomes = new List<NeuralNet>();
 		List<NeuralNet> sortedByFittest = currentGenomeGeneration.OrderBy(o=>o.fitness).ToList();
-		numberOfFitIndividuals = currentGenomeGeneration.Count / (1/3);
+		numberOfFitIndividuals = (int)(currentGenomeGeneration.Count / (1f/3f));
 		if (numberOfFitIndividuals % 2 != 0) numberOfFitIndividuals += 1;
 		if (numberOfFitIndividuals < 2) numberOfFitIndividuals = 2;
 		for (int i = 0; i < numberOfFitIndividuals; i ++)

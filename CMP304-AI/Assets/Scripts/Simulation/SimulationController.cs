@@ -10,7 +10,7 @@ public class SimulationController : MonoBehaviour {
 	private List<GameObject> cars = new List<GameObject>();
 	private GenerationalMutator generationalMutator;
 
-	private int numberOfCarsCrashed;
+	private int numberOfCarsCrashed = 0;
 
 	public delegate void SimulationRestarted();
 	public static SimulationRestarted SimulationRestartedHandler;
@@ -38,6 +38,7 @@ public class SimulationController : MonoBehaviour {
 		numberOfCarsCrashed = 0;
 		ResetCars();
 		if (SimulationRestartedHandler != null) SimulationRestartedHandler.Invoke();
+		generationalMutator.Evolve();
 	}
 
 	private void ResetCars()

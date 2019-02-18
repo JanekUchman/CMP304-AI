@@ -278,6 +278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1256645265}
   - component: {fileID: 1256645264}
+  - component: {fileID: 1256645266}
   m_Layer: 0
   m_Name: SimulationController
   m_TagString: Untagged
@@ -312,6 +313,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1256645266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256645263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63dbc843c57df2a4482685d3c6f303a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mutationPercentage: 5
 --- !u!1 &1282572921
 GameObject:
   m_ObjectHideFlags: 0
