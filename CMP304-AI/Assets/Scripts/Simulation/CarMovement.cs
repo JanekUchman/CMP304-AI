@@ -40,8 +40,14 @@ public class CarMovement : MonoBehaviour {
 	private void Start()
 	{
 		neuralNet = GetComponentInChildren<NeuralNet>();
-		//SimulationController.SimulationRestartedHandler += () => controlState = ControlState.NEURAL;
+		SimulationController.SimulationRestartedHandler += OnSimulationRestart;
 		
+	}
+
+	private void OnSimulationRestart()
+	{
+		controlState = ControlState.NEURAL;
+		neuralNet.fitness = 0;
 	}
 
 	void Update ()
@@ -91,8 +97,8 @@ public class CarMovement : MonoBehaviour {
 	{
 		if (controlState != ControlState.CRASHED && CrashedWallHandler != null)
 		{
-			CrashedWallHandler.Invoke();
 			controlState = ControlState.CRASHED;
+			CrashedWallHandler.Invoke();
 		}
 	}
 

@@ -27,10 +27,8 @@ public class SimulationController : MonoBehaviour {
 	{
 
 		numberOfCarsCrashed++;
-		Debug.Log(numberOfCarsCrashed);
 		if (numberOfCarsCrashed == numberOfCarsToSpawn)
 		{
-			Debug.Log("Reset sim");
 			ResetSimulation();
 		}
 	}
