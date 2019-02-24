@@ -37,7 +37,7 @@ public class SimulationController : MonoBehaviour {
 	{
 		numberOfCarsCrashed = 0;
 		ResetCars();
-		generationalMutator.Evolve();
+		StartCoroutine(generationalMutator.Evolve());
 		if (SimulationRestartedHandler != null) SimulationRestartedHandler.Invoke();
 	}
 
