@@ -9,12 +9,24 @@ public class Checkpoint : MonoBehaviour {
 	public delegate void CheckpointHit(float carFitness);
 	public static CheckpointHit CheckpointHitHandler;
 	
+	private List<int> carsPassed = new List<int>();
+	
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.CompareTag("Car"))
+		if (other.gameObject.CompareTag("Car") && !carsPassed.Contains(other.gameObject.GetComponent<CarMovement>().id))
 		{
-			float fitness = other.gameObject.GetComponentInChildren<NeuralNet>().fitness += fitnessValue;
-			if (CheckpointHitHandler != null) CheckpointHitHandler.Invoke(fitness);
+			carsPassed.Add(other.gameObject.GetComponent<CarMovement>().id);
+			other.gameObject.GetComponentInChildren<CarMovement>().HitCheckpoint(fitnessValue);
 		}
+	}
+
+	private void Start()
+	{
+		SimulationController.SimulationRestartedHandler += carsPassed.Clear;
+	}
+
+	public static void InvokeCheckpointHit(float neuralFitness)
+	{
+		if (CheckpointHitHandler != null) CheckpointHitHandler.Invoke(neuralFitness);
 	}
 }

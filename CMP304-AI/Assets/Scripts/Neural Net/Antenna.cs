@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +17,13 @@ public class Antenna : MonoBehaviour
 			Debug.DrawRay(transform.position, transform.forward*detectionDistance, Color.red, Time.deltaTime);
 		}
 		RaycastHit hit;
-		Physics.Raycast(transform.position, transform.forward, out hit, detectionDistance);
-		return hit.distance;
+		if (Physics.Raycast(transform.position, transform.forward, out hit, detectionDistance))
+		{
+			return hit.distance;
+		}
+		 else
+		{
+			return detectionDistance;
+		}
 	}
 }

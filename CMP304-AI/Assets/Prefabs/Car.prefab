@@ -935,11 +935,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlState: 1
-  moveSpeed: 0.1
-  turnSpeed: 150
+  spinOutTime: 10
+  moveSpeed: 5
+  turnSpeed: 200
   accelerationSpeed: 100
-  minSpeed: 0.05
-  maxSpeed: 0.15
+  minSpeed: 2
+  maxSpeed: 5
   antennas:
   - {fileID: 114581396034970852}
   - {fileID: 114703495535226286}

@@ -13,6 +13,11 @@ public class NeuralNet : MonoBehaviour {
 	[HideInInspector] public float fitness = 0;
 	const int inputLayer = 0;
 
+	private void Start()
+	{
+		SimulationController.SimulationRestartedHandler += () => fitness = 0;
+	}
+
 	public List<float> GetNeuralOutput(List<float> inputs)
 	{
 		if (inputs.Count != layers[inputLayer].nodes.Length) Debug.LogError("Neural Net: Input node count mismatch, check input layers and input values.");

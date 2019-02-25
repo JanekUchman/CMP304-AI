@@ -18,6 +18,7 @@ public class CarMovement : MonoBehaviour {
 	#region SetInInspector
 	
 	[SerializeField] private ControlState controlState;
+	[SerializeField] private float spinOutTime = 1.0f;
 	[SerializeField] private float moveSpeed = 0.1f;
 	[SerializeField] private float turnSpeed = 1;
 	[SerializeField] private float accelerationSpeed = 0.01f;
@@ -30,24 +31,20 @@ public class CarMovement : MonoBehaviour {
 	private List<float> neuralNetOutputs = new List<float>();
 	public delegate void CrashedWall();
 	public static CrashedWall CrashedWallHandler;
+	public int id;
 
 	private void Awake()
 	{
-		Physics.IgnoreLayerCollision(8, 8);
-	}
-
-	// Update is called once per frame
-	private void Start()
-	{
 		neuralNet = GetComponentInChildren<NeuralNet>();
 		SimulationController.SimulationRestartedHandler += OnSimulationRestart;
-		
+		Physics.IgnoreLayerCollision(8, 8);
 	}
 
 	private void OnSimulationRestart()
 	{
 		controlState = ControlState.NEURAL;
-		neuralNet.fitness = 0;
+		StopCoroutine("SpinOutTimer");
+		StartCoroutine("SpinOutTimer");
 	}
 
 	void Update ()
@@ -56,11 +53,11 @@ public class CarMovement : MonoBehaviour {
 		switch (controlState)
 		{
 				case ControlState.HUMAN:
-					transform.position += transform.forward * moveSpeed;
+					transform.position += transform.forward * (moveSpeed *Time.deltaTime);
 					HandleInput();
 					break;
 				case ControlState.NEURAL:
-					transform.position += transform.forward * moveSpeed;
+					transform.position += transform.forward * (moveSpeed * Time.deltaTime);
 					GetNeuralValues();
 					HandleNeuralInput();
 					break;
@@ -97,6 +94,7 @@ public class CarMovement : MonoBehaviour {
 	{
 		if (controlState != ControlState.CRASHED && CrashedWallHandler != null)
 		{
+			StopCoroutine("SpinOutTimer");
 			controlState = ControlState.CRASHED;
 			CrashedWallHandler.Invoke();
 		}
@@ -114,17 +112,30 @@ public class CarMovement : MonoBehaviour {
 		if (moveSpeed + speedChange < minSpeed)
 		{
 			moveSpeed = minSpeed;
-			return;
 		}
 		else if (moveSpeed + speedChange > maxSpeed)
 		{
 			moveSpeed = maxSpeed;
-			return;
 		}
 		else
 		{
 			moveSpeed += speedChange;
 		}
+	}
+
+	public void HitCheckpoint(float fitnessIncrease)
+	{
+		Debug.Log(neuralNet.fitness);
+		neuralNet.fitness += fitnessIncrease;
+		Checkpoint.InvokeCheckpointHit(neuralNet.fitness);
+		StopCoroutine("SpinOutTimer");
+		StartCoroutine("SpinOutTimer");
+	}
+
+	private IEnumerator SpinOutTimer()
+	{
+		yield return new WaitForSeconds(spinOutTime);
+		CrashedIntoWall();
 	}
 
 	private void AdjustSteering(float inputValue)

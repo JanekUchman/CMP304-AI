@@ -55,6 +55,7 @@ public class SimulationController : MonoBehaviour {
 		for (int i = 0; i < numberOfCarsToSpawn; i++)
 		{
 			cars.Add(Instantiate(carPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation));
+			cars[cars.Count - 1].GetComponent<CarMovement>().id = i;
 		}
 	}
 }

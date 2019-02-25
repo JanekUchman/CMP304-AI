@@ -153,7 +153,7 @@ public class GenerationalMutator : MonoBehaviour
 			fatherChromosome = leastFitGenomes[i].ExtractChromosome().ToArray();
 
 			//Create splices from the mother and father chromosome
-			SpliceGenes(i, motherChromosome, fatherChromosome, out fatherSegment,
+			SpliceGenes(motherChromosome, fatherChromosome, out fatherSegment,
 				out motherSegment);
 
 			//Combine and mutate the spliced genes
@@ -179,7 +179,7 @@ public class GenerationalMutator : MonoBehaviour
 			fatherChromosome = fittestGenomes[i + 1].ExtractChromosome().ToArray();
 
 			//Create splices from the mother and father chromosome
-			SpliceGenes(i, motherChromosome, fatherChromosome, out fatherSegment,
+			SpliceGenes(motherChromosome, fatherChromosome, out fatherSegment,
 				out motherSegment);
 
 			//Combine and mutate the spliced genes
@@ -188,7 +188,7 @@ public class GenerationalMutator : MonoBehaviour
 		}
 	}
 
-	private void SpliceGenes( int i, float[] motherChromosome,
+	private void SpliceGenes( float[] motherChromosome,
 		float[] fatherChromosome, out List<float> fatherSegment, out List<float> motherSegment)
 	{
 		//Get a random point to splice the genes
