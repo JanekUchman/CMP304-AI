@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class NeuralNet : MonoBehaviour {
 	
 	[HideInInspector] public float fitness = 0;
 	const int inputLayer = 0;
+	List<float> _chromosome = new List<float>();
 
 	private void Start()
 	{
@@ -22,7 +24,7 @@ public class NeuralNet : MonoBehaviour {
 	{
 		if (inputs.Count != layers[inputLayer].nodes.Length) Debug.LogError("Neural Net: Input node count mismatch, check input layers and input values.");
 		//First we set the first layer of nodes from our input values retrieved from the simulation
-		for (int i = 0; i < inputs.Count-1; i++)
+		for (int i = 0; i < inputs.Count; i++)
 		{
 			layers[inputLayer].nodes[i].SetInputNodeValue(inputs[i]);
 		}
@@ -64,21 +66,26 @@ public class NeuralNet : MonoBehaviour {
 			}
 		}
 
-		return chromosome;
+		_chromosome = chromosome.ToList();
+		return new Queue<float>(chromosome);
 	}
 
 	public void ApplyChromosome(Queue<float> chromosome)
 	{
+		List<float> testlist = new List<float>();
 		for (int i = 1; i < layers.Length; i ++) 
 		{
 			foreach (var node in layers[i].nodes)
 			{
 				//Extract the bias gene
 				node.bias = chromosome.Dequeue();
+				testlist.Add(node.bias);
 				//Extract each weighting gene
 				foreach (var nodeConnection in node.inputConnections)
 				{
 					nodeConnection.weight = chromosome.Dequeue();
+					testlist.Add(nodeConnection.weight);
+
 				}
 			}
 		}

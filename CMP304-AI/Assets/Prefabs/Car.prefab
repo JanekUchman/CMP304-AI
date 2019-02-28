@@ -875,7 +875,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &65706001928296488
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -899,7 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3c7df5d2b8e3c4686b08378d6745b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawAntenna: 1
+  detectionDistance: 5
 --- !u!114 &114055312190396922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -936,17 +936,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlState: 1
   spinOutTime: 10
-  moveSpeed: 5
-  turnSpeed: 200
-  accelerationSpeed: 100
-  minSpeed: 2
-  maxSpeed: 5
+  moveSpeed: 0.02
+  turnSpeed: 1.5
+  accelerationSpeed: 0.1
+  minSpeed: 0.02
+  maxSpeed: 0.03
   antennas:
   - {fileID: 114581396034970852}
   - {fileID: 114703495535226286}
   - {fileID: 114027131075135272}
   - {fileID: 114997328427959298}
   - {fileID: 114106674439967556}
+  id: 0
+  trackStats: 0
 --- !u!114 &114104696135515210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -983,7 +985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3c7df5d2b8e3c4686b08378d6745b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawAntenna: 1
+  detectionDistance: 5
 --- !u!114 &114108955098798874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1156,7 +1158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3c7df5d2b8e3c4686b08378d6745b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawAntenna: 1
+  detectionDistance: 5
 --- !u!114 &114624705421116064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1193,7 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3c7df5d2b8e3c4686b08378d6745b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawAntenna: 1
+  detectionDistance: 5
 --- !u!114 &114791495232161812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1287,4 +1289,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3c7df5d2b8e3c4686b08378d6745b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawAntenna: 1
+  detectionDistance: 5

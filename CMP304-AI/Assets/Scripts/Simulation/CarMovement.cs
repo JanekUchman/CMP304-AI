@@ -32,34 +32,37 @@ public class CarMovement : MonoBehaviour {
 	public delegate void CrashedWall();
 	public static CrashedWall CrashedWallHandler;
 	public int id;
+	public bool trackStats = false;
 
 	private void Awake()
 	{
 		neuralNet = GetComponentInChildren<NeuralNet>();
-		SimulationController.SimulationRestartedHandler += OnSimulationRestart;
+		SimulationController.SimulationRestartedHandler += () => StartCoroutine(OnSimulationRestart());
 		Physics.IgnoreLayerCollision(8, 8);
 	}
 
-	private void OnSimulationRestart()
+	private IEnumerator OnSimulationRestart()
 	{
+		yield return new WaitForSeconds(1.0f);
+		moveSpeed = minSpeed;
 		controlState = ControlState.NEURAL;
 		StopCoroutine("SpinOutTimer");
 		StartCoroutine("SpinOutTimer");
 	}
 
-	void Update ()
+	void FixedUpdate ()
 	{
 
 		switch (controlState)
 		{
 				case ControlState.HUMAN:
-					transform.position += transform.forward * (moveSpeed *Time.deltaTime);
+					transform.position += transform.forward * (moveSpeed );
 					HandleInput();
 					break;
 				case ControlState.NEURAL:
-					transform.position += transform.forward * (moveSpeed * Time.deltaTime);
 					GetNeuralValues();
 					HandleNeuralInput();
+					transform.position += transform.forward * (moveSpeed );
 					break;
 				case ControlState.CRASHED:
 					break;
@@ -78,7 +81,7 @@ public class CarMovement : MonoBehaviour {
 		List<float> inputs = new List<float>();
 		foreach (var antenna in antennas)
 		{
-			inputs.Add(antenna.GetDistanceFromWall());
+			inputs.Add(antenna.GetDistanceFromWall(trackStats));
 		}
 		inputs.Add(moveSpeed);
 		neuralNetOutputs = neuralNet.GetNeuralOutput(inputs);
@@ -108,7 +111,7 @@ public class CarMovement : MonoBehaviour {
 
 	private void AdjustSpeed(float inputValue)
 	{
-		float speedChange = inputValue * accelerationSpeed * Time.deltaTime;
+		float speedChange = inputValue * accelerationSpeed;
 		if (moveSpeed + speedChange < minSpeed)
 		{
 			moveSpeed = minSpeed;
@@ -125,7 +128,8 @@ public class CarMovement : MonoBehaviour {
 
 	public void HitCheckpoint(float fitnessIncrease)
 	{
-		Debug.Log(neuralNet.fitness);
+		if (trackStats)
+		Debug.Log(neuralNet.fitness + " " + id);
 		neuralNet.fitness += fitnessIncrease;
 		Checkpoint.InvokeCheckpointHit(neuralNet.fitness);
 		StopCoroutine("SpinOutTimer");
@@ -140,6 +144,6 @@ public class CarMovement : MonoBehaviour {
 
 	private void AdjustSteering(float inputValue)
 	{
-		transform.Rotate(0, inputValue*turnSpeed*Time.deltaTime, 0);
+		transform.Rotate(0, inputValue*turnSpeed, 0);
 	}
 }

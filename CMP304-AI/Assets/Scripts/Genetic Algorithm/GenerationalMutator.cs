@@ -103,27 +103,35 @@ public class GenerationalMutator : MonoBehaviour
 		List<NeuralNet> leastFitGenomes = SelectLeastFitIndividuals(fittestGenomes);
 		List<Queue<float>> childChromosomes = new List<Queue<float>>();
 		List<Queue<float>> parentChromosomes = new List<Queue<float>>();
-
-		foreach (var gene in fittestGenomes[0].ExtractChromosome())
-		{
-			Debug.Log(gene);
-		}
-		
+		List<Queue<float>> newGeneration = new List<Queue<float>>();
 		//Cut the fit genes up and cross them over creating new children
 		SpliceLeastFitWithFittest(fittestGenomes, leastFitGenomes, parentChromosomes, childChromosomes);
 
-		//Replace the least fit individuals with the child chromosomes of the fittest genes
-		for (int i = 0; i < childChromosomes.Count-1; i++)
+		//Re-apply the mutated parent chromosomes
+		for (int i = 0; i < NumberOfFit; i++)
 		{
-			currentGenomeGeneration[i].ApplyChromosome(childChromosomes[i]);
+			newGeneration.Add(fittestGenomes[i].ExtractChromosome());
+		}
+		
+		//Replace the least fit individuals with the child chromosomes of the fittest genes
+		for (int i = 0; i < childChromosomes.Count; i++)
+		{
+			var mutatedChromosome = MutateChromosome(numberOfGenes, childChromosomes[i]);
+			newGeneration.Add(mutatedChromosome);
+			//currentGenomeGeneration[i].ApplyChromosome(childChromosomes[i]);
 		}
 		
 		//Re-apply the mutated parent chromosomes
-		for (int j = 0; j < NumberOfFit-1; j++)
+		for (int i = 0; i < newGeneration.Count-1; i++)
 		{
-			int k = j + childChromosomes.Count -1;
-			currentGenomeGeneration[k].ApplyChromosome(fittestGenomes[j].ExtractChromosome());
+
+			//var mutatedChromosome = MutateChromosome(numberOfGenes, newGeneration[i]);
+			//int k = j + childChromosomes.Count-1;
+			currentGenomeGeneration[i].ApplyChromosome(newGeneration[i]);
+			//currentGenomeGeneration[k].ApplyChromosome(fittestGenomes[j].ExtractChromosome());
 		}
+
+	
 //		//Clear the old genomes from the list NOTE may not be necessary, depends on C# handling of list references
 //		currentGenomeGeneration.Clear();
 //		//Add the parent genomes
@@ -155,10 +163,9 @@ public class GenerationalMutator : MonoBehaviour
 			//Create splices from the mother and father chromosome
 			SpliceGenes(motherChromosome, fatherChromosome, out fatherSegment,
 				out motherSegment);
+			var newChromosome = CreateChild(numberOfGenes, fatherSegment, motherSegment);
+			childChromosomes.Add(new Queue<float>(newChromosome));
 
-			//Combine and mutate the spliced genes
-			MutateGenes(numberOfGenes, parentChromosomes, childChromosomes, fatherSegment, motherSegment, fatherChromosome,
-				motherChromosome, false);
 		}
 	}
 
@@ -181,10 +188,8 @@ public class GenerationalMutator : MonoBehaviour
 			//Create splices from the mother and father chromosome
 			SpliceGenes(motherChromosome, fatherChromosome, out fatherSegment,
 				out motherSegment);
-
-			//Combine and mutate the spliced genes
-			MutateGenes(numberOfGenes, parentChromosomes, childChromosomes, fatherSegment, motherSegment, fatherChromosome,
-				motherChromosome, true);
+			var newChromosome = CreateChild(numberOfGenes, fatherSegment, motherSegment);
+			childChromosomes.Add(new Queue<float>(newChromosome));
 		}
 	}
 
@@ -204,21 +209,20 @@ public class GenerationalMutator : MonoBehaviour
 		motherSegment.RemoveRange(slicePoint, numberOfGenes-slicePoint);
 	}
 
-	private void MutateGenes(int chromosomeLength, List<Queue<float>> parentChromosomes, List<Queue<float>> childChromosomes,
-		List<float> fatherSegment, List<float> motherSegment, float[] fatherChromosome, float[] motherChromosome, bool reAddFatherGene)
-	{
-		//Get the new chromosome based on the gene slices
-		var newChromosome = CreateChild(chromosomeLength, fatherSegment, motherSegment);
-		//Mutate all of the chromosomes individually
-		MutateChromosome(chromosomeLength, ref newChromosome);
-		MutateChromosome(chromosomeLength, ref fatherChromosome);
-		MutateChromosome(chromosomeLength, ref motherChromosome);
-
-		//Re-add the chromosomes to the gene pool
-//		parentChromosomes.Add(new Queue<float>(motherChromosome));
-//		parentChromosomes.Add(new Queue<float>(fatherChromosome));
-		childChromosomes.Add(new Queue<float>(newChromosome));
-	}
+//	private void MutateGenes(int chromosomeLength, List<Queue<float>> childChromosomes,
+//		List<float> fatherSegment, List<float> motherSegment, float[] fatherChromosome, float[] motherChromosome, bool reAddFatherGene)
+//	{
+//		//Get the new chromosome based on the gene slices
+//		
+//		//Mutate all of the chromosomes individually
+//		MutateChromosome(chromosomeLength, ref newChromosome);
+//		//MutateChromosome(chromosomeLength, ref fatherChromosome);
+//		//MutateChromosome(chromosomeLength, ref motherChromosome);
+//
+//		//Re-add the chromosomes to the gene pool
+////		parentChromosomes.Add(new Queue<float>(motherChromosome));
+////		parentChromosomes.Add(new Queue<float>(fatherChromosome));
+//	}
 
 	//Takes two array segments and combines them into a new genome
 	private static float[] CreateChild(int chromosomeLength, List<float> fatherSegment, List<float> motherSegment)
@@ -231,17 +235,19 @@ public class GenerationalMutator : MonoBehaviour
 		return newChromosome;
 	}
 
-	private void MutateChromosome(int chromosomeLength, ref float[] newChromosome)
+	private Queue<float> MutateChromosome(int chromosomeLength, Queue<float> newChromosome)
 	{
+		float[] chromosomeAsArray = newChromosome.ToArray();
 		for (int i = 0; i < chromosomeLength; i++)
 		{
 			//If the random lands below our percentage rate, mutate the gene
 			if (Random.Range(0, 100) < mutationPercentage)
 			{
 				//Mutation involves randomly applying a value to the gene
-				newChromosome[i] = Random.Range(-1f, 1f);
+				chromosomeAsArray[i] = Random.Range(-1f, 1f);
 			}
 		}
+		return new Queue<float>(chromosomeAsArray);
 	}
 
 	private List<NeuralNet> SelectLeastFitIndividuals(List<NeuralNet> fittestGenomes)
@@ -268,7 +274,7 @@ public class GenerationalMutator : MonoBehaviour
 		{
 			fittestGenomes.Add(sortedByFittest[i]);
 		}
-		return fittestGenomes;
+		return new List<NeuralNet>(fittestGenomes);
 	}
 	
 	public GameObject GetFittestCar()

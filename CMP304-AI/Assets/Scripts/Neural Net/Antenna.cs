@@ -6,13 +6,11 @@ using UnityEngine;
 public class Antenna : MonoBehaviour
 {
 
-	private float detectionDistance = 3.0f;
-	[SerializeField] private bool drawAntenna = true;
+	[SerializeField] private float detectionDistance = 3.0f;
 	
-	
-	public float GetDistanceFromWall()
+	public float GetDistanceFromWall(bool showAntenna)
 	{
-		if (drawAntenna)
+		if (showAntenna)
 		{
 			Debug.DrawRay(transform.position, transform.forward*detectionDistance, Color.red, Time.deltaTime);
 		}
