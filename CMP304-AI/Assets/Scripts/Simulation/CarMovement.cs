@@ -139,6 +139,7 @@ public class CarMovement : MonoBehaviour {
 	private IEnumerator SpinOutTimer()
 	{
 		yield return new WaitForSeconds(spinOutTime);
+		neuralNet.fitness /= 2;
 		CrashedIntoWall();
 	}
 

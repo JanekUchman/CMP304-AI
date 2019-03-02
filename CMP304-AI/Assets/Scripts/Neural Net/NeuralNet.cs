@@ -67,7 +67,7 @@ public class NeuralNet : MonoBehaviour {
 		}
 
 		_chromosome = chromosome.ToList();
-		return new Queue<float>(chromosome);
+		return (Queue<float>)DeepCopy.Copy(chromosome);
 	}
 
 	public void ApplyChromosome(Queue<float> chromosome)
