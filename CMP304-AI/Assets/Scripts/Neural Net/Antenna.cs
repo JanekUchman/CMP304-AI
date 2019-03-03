@@ -7,21 +7,25 @@ public class Antenna : MonoBehaviour
 {
 
 	[SerializeField] private float detectionDistance = 3.0f;
-	
+	[SerializeField] private float distanceFromWall;
 	public float GetDistanceFromWall(bool showAntenna)
 	{
-		if (showAntenna)
-		{
-			Debug.DrawRay(transform.position, transform.forward*detectionDistance, Color.red, Time.deltaTime);
-		}
+		var dist = 0.0f;
 		RaycastHit hit;
 		if (Physics.Raycast(transform.position, transform.forward, out hit, detectionDistance))
 		{
-			return hit.distance;
+			dist =  hit.distance;
 		}
 		 else
 		{
-			return detectionDistance;
+			dist = detectionDistance;
 		}
+		if (showAntenna)
+		{
+			distanceFromWall = dist;
+			Debug.DrawRay(transform.position, transform.forward*dist, Color.red, Time.fixedDeltaTime);
+		}
+
+		return dist;
 	}
 }

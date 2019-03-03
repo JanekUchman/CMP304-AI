@@ -7,6 +7,8 @@ public class SimulationController : MonoBehaviour {
 	[SerializeField] private GameObject spawnPoint;
 	[SerializeField] private GameObject carPrefab;
 	[SerializeField] private int numberOfCarsToSpawn;
+	[Range(0.5f, 3)]
+	[SerializeField] private float timeScale =1;
 	private List<GameObject> cars = new List<GameObject>();
 	private GenerationalMutator generationalMutator;
 
@@ -17,6 +19,7 @@ public class SimulationController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		Time.timeScale = timeScale;
 		generationalMutator = FindObjectOfType<GenerationalMutator>();
 		SpawnCars();
 		StartCoroutine(generationalMutator.Evolve(firstGeneration: true));
@@ -35,6 +38,8 @@ public class SimulationController : MonoBehaviour {
 
 	private void ResetSimulation()
 	{
+		Time.timeScale = timeScale;
+		//Time.fixedDeltaTime = 0.0167f * Time.timeScale;
 		numberOfCarsCrashed = 0;
 		ResetCars();
 		StartCoroutine(generationalMutator.Evolve());

@@ -11,11 +11,14 @@ using Random = UnityEngine.Random;
 
 public class GenerationalMutator : MonoBehaviour
 {
+	[Range(0, 10)]
 	[SerializeField] private float mutationPercentage;
 	[Range(0, 30)]
 	[SerializeField] private float fitPopulationPercentage = 10;
 	[Range(0, 50)]
 	[SerializeField] private float percentageOfUnfitToReplace = 20;
+
+	[SerializeField] private bool spliceGenesUsingSegments = false;
 	//THe neural nets of the cars currently in simulation
 	private List<NeuralNet> currentGenomeGeneration = new List<NeuralNet>();
 
@@ -61,7 +64,7 @@ public class GenerationalMutator : MonoBehaviour
 	{
 		get
 		{ 
-			int value = (int)(CurrentGenomeGeneration.Count * ((100-fitPopulationPercentage)/100));
+			int value = (int)(CurrentGenomeGeneration.Count * ((100-fitPopulationPercentage-percentageOfUnfitToReplace)/100));
 			return value;
 		}
 	}
@@ -102,24 +105,27 @@ public class GenerationalMutator : MonoBehaviour
 	{
 		SetIndividuals();
 		List<NeuralNet> fittestGenomes = SelectFittestIndividuals();
-		List<NeuralNet> leastFitGenomes = SelectLeastFitIndividuals(fittestGenomes);
+		List<NeuralNet> bottomOfGenePoolGenomes = SelectBottomOfGenePool();
+		List<NeuralNet> unfitGenomes = SelectUnfitIndividuals(fittestGenomes, bottomOfGenePoolGenomes);
 		List<Queue<float>> childChromosomes = new List<Queue<float>>();
-		List<Queue<float>> parentChromosomes = new List<Queue<float>>();
 		List<Queue<float>> newGeneration = new List<Queue<float>>();
 		//Cut the fit genes up and cross them over creating new children
-		SpliceLeastFitWithFittest(fittestGenomes, leastFitGenomes, parentChromosomes, childChromosomes);
+		SpliceUnfitWithFittest(fittestGenomes, unfitGenomes, childChromosomes);
+		SpliceFittestWithFittest(fittestGenomes, childChromosomes);
 
+		newGeneration.Add(fittestGenomes[0].ExtractChromosome());
 		//Re-apply the mutated parent chromosomes
-		for (int i = 0; i < FitCount; i++)
+		for (int i = 1; i < FitCount; i++)
 		{
-			newGeneration.Add(fittestGenomes[i].ExtractChromosome());
+			var mutatedChromosome = MutateChromosome(fittestGenomes[i].ExtractChromosome());
+			newGeneration.Add(mutatedChromosome);
 		}
 		
 		//Replace the least fit individuals with the child chromosomes of the fittest genes
 		for (int i = 0; i < childChromosomes.Count; i++)
 		{
-			var mutatedChromosome = DeepCopy.Copy(MutateChromosome(NumberOfGenes, childChromosomes[i]));
-			newGeneration.Add((Queue<float>)mutatedChromosome);
+			var mutatedChromosome = MutateChromosome(childChromosomes[i]);
+			newGeneration.Add(mutatedChromosome);
 		}
 		
 		//Re-apply the mutated parent chromosomes
@@ -127,54 +133,60 @@ public class GenerationalMutator : MonoBehaviour
 		{
 			currentGenomeGeneration[i].ApplyChromosome(newGeneration[i]);
 		}
-
 	}
 
-	private void SpliceLeastFitWithFittest(List<NeuralNet> fittestGenomes, List<NeuralNet> leastFitGenomes, List<Queue<float>> parentChromosomes,
-		List<Queue<float>> childChromosomes)
+	private void SpliceUnfitWithFittest(List<NeuralNet> fittestGenomes, List<NeuralNet> leastFitGenomes, List<Queue<float>> childChromosomes)
 	{
-		float[] motherChromosome;
-		float[] fatherChromosome;
-		List<float> fatherSegment;
-		List<float> motherSegment;
+		int j = 0;
 		//We want to increase the counter by two, to allow for each parent
 		for (int i = 0; i < UnfitCount; i ++)
 		{
 			//Get the chromosomes of the 1st and 2nd point of the array, the next two fittest individuals
-			motherChromosome = fittestGenomes[Random.Range(0, FitCount-1)].ExtractChromosome().ToArray();
-			fatherChromosome = leastFitGenomes[i].ExtractChromosome().ToArray();
+			var motherChromosome = fittestGenomes[j].ExtractChromosome().ToArray();
+			var fatherChromosome = leastFitGenomes[i].ExtractChromosome().ToArray();
 
-			//Create splices from the mother and father chromosome
-			SpliceGenes(motherChromosome, fatherChromosome, out fatherSegment,
-				out motherSegment);
-			var newChromosome = CreateChild(NumberOfGenes, fatherSegment, motherSegment);
+			var newChromosome = GetChild(motherChromosome, fatherChromosome);
+
 			childChromosomes.Add(new Queue<float>(newChromosome));
-
+			j++;
+			if (j >= FitCount - 1) j = 0;
 		}
 	}
 
-	private void SpliceFittestWithFittest(List<NeuralNet> fittestGenomes, List<Queue<float>> parentChromosomes, List<Queue<float>> childChromosomes)
+	private void SpliceFittestWithFittest(List<NeuralNet> fittestGenomes, List<Queue<float>> childChromosomes)
 	{
-		float[] motherChromosome;
-		float[] fatherChromosome;
-		List<float> fatherSegment;
-		List<float> motherSegment;
-		//We want to increase the counter by two, to allow for each parent
-		for (int i = 0; i < FitCount; i += 2)
+		int j = 0;
+		for (int i = 0; i < BottomOfGenePoolCount; i ++)
 		{
-			//check both parents are referenced, just in case we've gone off the end of the list
-			if (fittestGenomes[i + 1] == null || fittestGenomes[i] == null) continue;
-
 			//Get the chromosomes of the 1st and 2nd point of the array, the next two fittest individuals
-			motherChromosome = fittestGenomes[i].ExtractChromosome().ToArray();
-			fatherChromosome = fittestGenomes[i + 1].ExtractChromosome().ToArray();
+			var motherChromosome = fittestGenomes[j].ExtractChromosome().ToArray();
+			var fatherChromosome = fittestGenomes[j+1].ExtractChromosome().ToArray();
 
+			var newChromosome = GetChild(motherChromosome, fatherChromosome);
+			childChromosomes.Add(new Queue<float>(newChromosome));
+			j+=2;
+			if (j >= FitCount - 1) j = 0;
+		}
+	}
+
+	private float[] GetChild(float[] motherChromosome, float[] fatherChromosome)
+	{
+		var newChromosome = new float[NumberOfGenes];
+		if (spliceGenesUsingSegments)
+		{
 			//Create splices from the mother and father chromosome
+			List<float> fatherSegment;
+			List<float> motherSegment;
 			SpliceGenes(motherChromosome, fatherChromosome, out fatherSegment,
 				out motherSegment);
-			var newChromosome = CreateChild(NumberOfGenes, fatherSegment, motherSegment);
-			childChromosomes.Add(new Queue<float>(newChromosome));
+			newChromosome = CreateChild(fatherSegment, motherSegment);
 		}
+		else
+		{
+			newChromosome = CreateUnsegmentedChild(fatherChromosome, motherChromosome);
+		}
+
+		return newChromosome;
 	}
 
 	private void SpliceGenes( float[] motherChromosome,
@@ -192,37 +204,41 @@ public class GenerationalMutator : MonoBehaviour
 		motherSegment = new List<float>(motherChromosome);
 		motherSegment.RemoveRange(slicePoint, NumberOfGenes-slicePoint);
 	}
-
-//	private void MutateGenes(int chromosomeLength, List<Queue<float>> childChromosomes,
-//		List<float> fatherSegment, List<float> motherSegment, float[] fatherChromosome, float[] motherChromosome, bool reAddFatherGene)
-//	{
-//		//Get the new chromosome based on the gene slices
-//		
-//		//Mutate all of the chromosomes individually
-//		MutateChromosome(chromosomeLength, ref newChromosome);
-//		//MutateChromosome(chromosomeLength, ref fatherChromosome);
-//		//MutateChromosome(chromosomeLength, ref motherChromosome);
-//
-//		//Re-add the chromosomes to the gene pool
-////		parentChromosomes.Add(new Queue<float>(motherChromosome));
-////		parentChromosomes.Add(new Queue<float>(fatherChromosome));
-//	}
+	
+	private float[] CreateUnsegmentedChild( float[] motherChromosome, float[] fatherChromosome)
+	{
+		float[] newChromosome = new float[NumberOfGenes];
+		for (int i = 0; i < NumberOfGenes; i++)
+		{
+			if (Random.Range(0, 1) == 0)
+			{
+				newChromosome[i] = motherChromosome[i];
+			}
+			else
+			{
+				newChromosome[i] = fatherChromosome[i];
+			}
+		}
+		
+		return newChromosome;
+	}
 
 	//Takes two array segments and combines them into a new genome
-	private static float[] CreateChild(int chromosomeLength, List<float> fatherSegment, List<float> motherSegment)
+
+	private float[] CreateChild( List<float> fatherSegment, List<float> motherSegment)
 	{
-		float[] newChromosome = new float[chromosomeLength];
+		float[] newChromosome = new float[NumberOfGenes];
 		//Add the father segment to the start of the array, since this is where we took it from earlier
 		fatherSegment.CopyTo(newChromosome, 0);
 		//Add the mother's genes onto the end of the fathers
 		motherSegment.CopyTo(newChromosome, fatherSegment.Count);
-		return newChromosome;
+		return (float[]) DeepCopy.Copy(newChromosome);
 	}
 
-	private Queue<float> MutateChromosome(int chromosomeLength, Queue<float> newChromosome)
+	private Queue<float> MutateChromosome(Queue<float> newChromosome)
 	{
 		Queue<float> mutatedChromosome = new Queue<float>();
-		for (int i = 0; i < chromosomeLength; i++)
+		for (int i = 0; i < NumberOfGenes; i++)
 		{
 			//If the random lands below our percentage rate, mutate the gene
 			if (Random.Range(0, 100) < mutationPercentage)
@@ -240,7 +256,20 @@ public class GenerationalMutator : MonoBehaviour
 		return mutatedChromosome;
 	}
 
-	private List<NeuralNet> SelectLeastFitIndividuals(List<NeuralNet> fittestGenomes)
+	private List<NeuralNet> SelectBottomOfGenePool()
+	{
+		List<NeuralNet> bottomOfGenePool = new List<NeuralNet>();
+		//Order the list from least fit to most
+		List<NeuralNet> sortedByLeastFit = CurrentGenomeGeneration.OrderBy(o=>o.fitness).ToList();
+		//Add the top X to the fittest
+		for (int i = 0; i < BottomOfGenePoolCount; i ++)
+		{
+			bottomOfGenePool.Add(sortedByLeastFit[i]);
+		}
+		return new List<NeuralNet>(bottomOfGenePool);
+	}
+
+	private List<NeuralNet> SelectUnfitIndividuals(List<NeuralNet> fittestGenomes, List<NeuralNet> bottomOfGenePool)
 	{
 		List<NeuralNet> leastFitGenomes = new List<NeuralNet>(CurrentGenomeGeneration);
 		//Remove all the fit genomes from the list
@@ -248,7 +277,12 @@ public class GenerationalMutator : MonoBehaviour
 		{
 			leastFitGenomes.Remove(fittestGenome);
 		}
-		//what we're left with is the least fit
+		
+		foreach (var bottomGene in bottomOfGenePool)
+		{
+			leastFitGenomes.Remove(bottomGene);
+		}
+		//what we're left with is least fit
 		return leastFitGenomes;
 	}
 
@@ -269,6 +303,7 @@ public class GenerationalMutator : MonoBehaviour
 	
 	public GameObject GetFittestCar()
 	{
+		if (currentGenomeGeneration.Count == 0) return null;
 		//Set a baseline
 		NeuralNet fittest = CurrentGenomeGeneration[0];
 		//Check all for greatest fitness value

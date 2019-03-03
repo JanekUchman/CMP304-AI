@@ -6,7 +6,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour {
 	[SerializeField] private float fitnessValue = 0.1f;
 
-	public delegate void CheckpointHit(float carFitness);
+	public delegate void CheckpointHit(float carFitness, GameObject car);
 	public static CheckpointHit CheckpointHitHandler;
 	
 	private List<int> carsPassed = new List<int>();
@@ -25,8 +25,8 @@ public class Checkpoint : MonoBehaviour {
 		SimulationController.SimulationRestartedHandler += carsPassed.Clear;
 	}
 
-	public static void InvokeCheckpointHit(float neuralFitness)
+	public static void InvokeCheckpointHit(float neuralFitness, GameObject car)
 	{
-		if (CheckpointHitHandler != null) CheckpointHitHandler.Invoke(neuralFitness);
+		CheckpointHitHandler?.Invoke(neuralFitness, car);
 	}
 }

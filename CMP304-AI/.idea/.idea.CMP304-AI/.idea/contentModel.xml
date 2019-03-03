@@ -16,6 +16,7 @@
             <e p="NeuralNode.cs" t="Include" />
           </e>
           <e p="Simulation" t="Include">
+            <e p="CameraController.cs" t="Include" />
             <e p="CarMovement.cs" t="Include" />
             <e p="Checkpoint.cs" t="Include" />
             <e p="SimulationController.cs" t="Include" />
@@ -23,9 +24,9 @@
           <e p="UI" t="Include">
             <e p="FPSCounter.cs" t="Include" />
           </e>
-        </e>
-        <e p="Utility" t="Include">
-          <e p="DeepCopy.cs" t="Include" />
+          <e p="Utility" t="Include">
+            <e p="DeepCopy.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="CMP304-AI.sln" t="IncludeFlat" />

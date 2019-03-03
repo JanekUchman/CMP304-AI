@@ -43,7 +43,7 @@ public class CarMovement : MonoBehaviour {
 
 	private IEnumerator OnSimulationRestart()
 	{
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(0.1f);
 		moveSpeed = minSpeed;
 		controlState = ControlState.NEURAL;
 		StopCoroutine("SpinOutTimer");
@@ -95,7 +95,7 @@ public class CarMovement : MonoBehaviour {
 
 	private void CrashedIntoWall()
 	{
-		if (controlState != ControlState.CRASHED && CrashedWallHandler != null)
+		if (controlState != ControlState.CRASHED)
 		{
 			StopCoroutine("SpinOutTimer");
 			controlState = ControlState.CRASHED;
@@ -129,9 +129,12 @@ public class CarMovement : MonoBehaviour {
 	public void HitCheckpoint(float fitnessIncrease)
 	{
 		if (trackStats)
-		Debug.Log(neuralNet.fitness + " " + id);
+		{
+			Debug.Log(neuralNet.fitness);
+		}
+
 		neuralNet.fitness += fitnessIncrease;
-		Checkpoint.InvokeCheckpointHit(neuralNet.fitness);
+		Checkpoint.InvokeCheckpointHit(neuralNet.fitness, gameObject);
 		StopCoroutine("SpinOutTimer");
 		StartCoroutine("SpinOutTimer");
 	}

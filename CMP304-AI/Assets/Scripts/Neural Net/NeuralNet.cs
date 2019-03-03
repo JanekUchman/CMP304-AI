@@ -89,6 +89,8 @@ public class NeuralNet : MonoBehaviour {
 				}
 			}
 		}
+
+		_chromosome = testlist;
 	}
 
 	public int GetChromosomeLength()

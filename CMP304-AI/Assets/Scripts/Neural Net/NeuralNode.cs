@@ -30,6 +30,7 @@ public class NeuralNode : MonoBehaviour
 	//Used for the hidden layers and final output layer
 	public void SetOutput(ActivationFunctionTypes activationFunctionUsed)
 	{
+		output = 0;
 		//Cycle through all the inputs into this node
 		foreach (var nodeConnection in inputConnections)
 		{
@@ -72,16 +73,12 @@ public class NeuralNode : MonoBehaviour
 	//Activation function sigmoid
 	private float ActivationSigmoid(float outputValue)
 	{
-		if (outputValue > 10) return 1.0f;
-		else if (outputValue < -10) return 0.0f;
-		else return (float)(1.0 / (1.0 + Math.Exp(-outputValue)));
+		return (float)(1.0 / (1.0 + Math.Exp(-outputValue)));
 	}
 
 	private float ActivationTanH(float outputValue)
 	{
-		if (outputValue > 10) return 1.0f;
-		else if (outputValue < -10) return 0.0f;
-		else return (float)Math.Tanh(outputValue);
+		return (float)Math.Tanh(outputValue);
 	}
 
 	[Serializable]
