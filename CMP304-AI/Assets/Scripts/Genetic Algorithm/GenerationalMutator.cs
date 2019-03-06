@@ -11,12 +11,14 @@ using Random = UnityEngine.Random;
 
 public class GenerationalMutator : MonoBehaviour
 {
+	
 	[Range(0, 10)]
 	[SerializeField] private float mutationPercentage;
 	[Range(0, 30)]
 	[SerializeField] private float fitPopulationPercentage = 10;
 	[Range(0, 50)]
 	[SerializeField] private float percentageOfUnfitToReplace = 20;
+	[SerializeField] private bool geneSetMutation;
 
 	[SerializeField] private bool spliceGenesUsingSegments = false;
 	//THe neural nets of the cars currently in simulation
@@ -126,6 +128,38 @@ public class GenerationalMutator : MonoBehaviour
 		{
 			var mutatedChromosome = MutateChromosome(childChromosomes[i]);
 			newGeneration.Add(mutatedChromosome);
+		}
+		
+		//Re-apply the mutated parent chromosomes
+		for (int i = 0; i < newGeneration.Count-1; i++)
+		{
+			currentGenomeGeneration[i].ApplyChromosome(newGeneration[i]);
+		}
+	}
+	
+	private void CreateNewGenerationWithGeneSets()
+	{
+		SetIndividuals();
+		List<NeuralNet> fittestGenomes = SelectFittestIndividuals();
+		List<NeuralNet> bottomOfGenePoolGenomes = SelectBottomOfGenePool();
+		List<NeuralNet> unfitGenomes = SelectUnfitIndividuals(fittestGenomes, bottomOfGenePoolGenomes);
+		List<Queue<float>> childChromosomes = new List<Queue<float>>();
+		List<Queue<float>> newGeneration = new List<Queue<float>>();
+		//Cut the fit genes up and cross them over creating new children
+		SpliceUnfitWithFittest(fittestGenomes, unfitGenomes, childChromosomes);
+		SpliceFittestWithFittest(fittestGenomes, childChromosomes);
+
+		newGeneration.Add(fittestGenomes[0].ExtractChromosome());
+		//Re-apply the mutated parent chromosomes
+		for (int i = 1; i < FitCount; i++)
+		{
+			newGeneration.Add(fittestGenomes[i].ExtractChromosome());
+		}
+		
+		//Replace the least fit individuals with the child chromosomes of the fittest genes
+		for (int i = 0; i < childChromosomes.Count; i++)
+		{
+			newGeneration.Add(childChromosomes[i]);
 		}
 		
 		//Re-apply the mutated parent chromosomes
@@ -329,5 +363,12 @@ public class GenerationalMutator : MonoBehaviour
 			}
 			genome.ApplyChromosome(randomChromosome);
 		}
+	}
+
+	public void SetSettings(SimulationController.MutationSettings mutationSetting)
+	{
+		mutationPercentage = mutationSetting.mutationPercentage;
+		fitPopulationPercentage = mutationSetting.fitPopulationPercentage;
+		percentageOfUnfitToReplace = mutationSetting.percentageOfUnfitToReplace;
 	}
 }

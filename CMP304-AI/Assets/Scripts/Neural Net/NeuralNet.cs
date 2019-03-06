@@ -70,6 +70,45 @@ public class NeuralNet : MonoBehaviour {
 		return (Queue<float>)DeepCopy.Copy(chromosome);
 	}
 
+	public Queue<Queue<float>> ExtractChromosomeGeneSets()
+	{
+		Queue<Queue<float>>	chromosome = new Queue<Queue<float>>();	
+		for (int i = 1; i < layers.Length; i ++) 
+		{
+			foreach (var node in layers[i].nodes)
+			{
+				Queue<float> geneSet = new Queue<float>();
+				//Extract the bias gene
+				geneSet.Enqueue(node.bias);
+				//Extract each weighting gene
+				foreach (var nodeConnection in node.inputConnections)
+				{
+					geneSet.Enqueue(nodeConnection.weight);
+				}
+				chromosome.Enqueue(geneSet);
+			}
+		}
+		return (Queue<Queue<float>>)DeepCopy.Copy(chromosome);
+	}
+
+	public void ApplyChromsome(Queue<Queue<float>> chromosome)
+	{
+		for (int i = 1; i < layers.Length; i ++) 
+		{
+			foreach (var node in layers[i].nodes)
+			{
+				var geneset = chromosome.Dequeue();
+				//Extract the bias gene
+				node.bias = geneset.Dequeue();
+				//Extract each weighting gene
+				foreach (var nodeConnection in node.inputConnections)
+				{
+					nodeConnection.weight = geneset.Dequeue();
+				}
+			}
+		}
+	}
+	
 	public void ApplyChromosome(Queue<float> chromosome)
 	{
 		List<float> testlist = new List<float>();
