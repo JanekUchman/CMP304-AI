@@ -37,8 +37,18 @@ public class CarMovement : MonoBehaviour {
 	private void Awake()
 	{
 		neuralNet = GetComponentInChildren<NeuralNet>();
-		SimulationController.SimulationRestartedHandler += () => StartCoroutine(OnSimulationRestart());
+		SimulationController.SimulationRestartedHandler += OnSimulationRestartCoroutine;
 		Physics.IgnoreLayerCollision(8, 8);
+	}
+
+	private void OnDestroy()
+	{
+		SimulationController.SimulationRestartedHandler -= OnSimulationRestartCoroutine;
+	}
+
+	private void OnSimulationRestartCoroutine()
+	{
+		StartCoroutine(OnSimulationRestart());
 	}
 
 	private IEnumerator OnSimulationRestart()

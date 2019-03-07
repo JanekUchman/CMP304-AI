@@ -20,6 +20,7 @@ public class GenerationalMutator : MonoBehaviour
 	[SerializeField] private float percentageOfUnfitToReplace = 20;
 	[SerializeField] private bool geneSetMutation;
 
+	[SerializeField] private bool mutateGenesUsingGeneSets = true;
 	[SerializeField] private bool spliceGenesUsingSegments = false;
 	//THe neural nets of the cars currently in simulation
 	private List<NeuralNet> currentGenomeGeneration = new List<NeuralNet>();
@@ -91,6 +92,7 @@ public class GenerationalMutator : MonoBehaviour
 	{
 		if (firstGeneration)
 		{
+			currentGenomeGeneration.Clear();
 			//We have to wait a frame so the gameobjects are spawned
 			yield return new WaitForEndOfFrame();
 			yield return new WaitForEndOfFrame();
@@ -99,7 +101,14 @@ public class GenerationalMutator : MonoBehaviour
 		}
 		else
 		{
-			CreateNewGeneration();
+			if (mutateGenesUsingGeneSets)
+			{
+				CreateNewGenerationWithGeneSets();
+			}
+			else
+			{
+				CreateNewGeneration();
+			}
 		}
 	}
 
@@ -145,11 +154,23 @@ public class GenerationalMutator : MonoBehaviour
 		List<NeuralNet> unfitGenomes = SelectUnfitIndividuals(fittestGenomes, bottomOfGenePoolGenomes);
 		List<Queue<float>> childChromosomes = new List<Queue<float>>();
 		List<Queue<float>> newGeneration = new List<Queue<float>>();
+		
+		newGeneration.Add(fittestGenomes[0].ExtractChromosome());
+		
+		foreach (var fittestGenome in fittestGenomes)
+		{
+			fittestGenome.ApplyChromosome(MutateChromosome(fittestGenome.ExtractChromosomeGeneSets()));
+		}
+		
+		foreach (var unfitGenome in unfitGenomes)
+		{
+			unfitGenome.ApplyChromosome(MutateChromosome(unfitGenome.ExtractChromosomeGeneSets()));
+		}
 		//Cut the fit genes up and cross them over creating new children
 		SpliceUnfitWithFittest(fittestGenomes, unfitGenomes, childChromosomes);
 		SpliceFittestWithFittest(fittestGenomes, childChromosomes);
 
-		newGeneration.Add(fittestGenomes[0].ExtractChromosome());
+		
 		//Re-apply the mutated parent chromosomes
 		for (int i = 1; i < FitCount; i++)
 		{
@@ -289,6 +310,31 @@ public class GenerationalMutator : MonoBehaviour
 
 		return mutatedChromosome;
 	}
+	
+	private Queue<float> MutateChromosome(Queue<Queue<float>> newChromosome)
+	{
+		Queue<float> mutatedChromosome = new Queue<float>();
+		foreach (Queue<float> geneSet in newChromosome)
+		{
+			//If the random lands below our percentage rate, mutate the gene
+			if (Random.Range(0, 100) < mutationPercentage)
+			{
+				foreach (var gene in geneSet)
+				{
+					mutatedChromosome.Enqueue(Random.Range(-1f, 1f));
+				}
+			}
+			else
+			{
+				foreach (var gene in geneSet)
+				{
+					mutatedChromosome.Enqueue(gene);
+				}
+			}
+		}
+
+		return mutatedChromosome;
+	}
 
 	private List<NeuralNet> SelectBottomOfGenePool()
 	{
@@ -370,5 +416,7 @@ public class GenerationalMutator : MonoBehaviour
 		mutationPercentage = mutationSetting.mutationPercentage;
 		fitPopulationPercentage = mutationSetting.fitPopulationPercentage;
 		percentageOfUnfitToReplace = mutationSetting.percentageOfUnfitToReplace;
+		spliceGenesUsingSegments = mutationSetting.spliceGenesUsingSegments;
+		mutateGenesUsingGeneSets = mutationSetting.mutateGenesUsingGeneSets;
 	}
 }

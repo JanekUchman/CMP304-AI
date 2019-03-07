@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1695414085061472}
+  m_IsPrefabParent: 1
+--- !u!1 &1695414085061472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4667445285684034}
+  - component: {fileID: 114950426437422270}
+  - component: {fileID: 114023850858906642}
+  m_Layer: 0
+  m_Name: SimulationController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4667445285684034
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695414085061472}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.119, y: -5.832, z: -10.978}
+  m_LocalScale: {x: 0.6, y: 0.52, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114023850858906642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695414085061472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63dbc843c57df2a4482685d3c6f303a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mutationPercentage: 2
+  fitPopulationPercentage: 10
+  percentageOfUnfitToReplace: 20
+  geneSetMutation: 0
+  mutateGenesUsingGeneSets: 0
+  spliceGenesUsingSegments: 0
+--- !u!114 &114950426437422270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695414085061472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843aff79f3ce97742800fc76dfb61b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mutationSettings:
+  - mutationPercentage: 2
+    fitPopulationPercentage: 20
+    percentageOfUnfitToReplace: 30
+    mutateGenesUsingGeneSets: 0
+    spliceGenesUsingSegments: 0
+    carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
+      type: 2}
+  - mutationPercentage: 2
+    fitPopulationPercentage: 20
+    percentageOfUnfitToReplace: 0
+    mutateGenesUsingGeneSets: 0
+    spliceGenesUsingSegments: 0
+    carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
+      type: 2}
+  - mutationPercentage: 10
+    fitPopulationPercentage: 20
+    percentageOfUnfitToReplace: 30
+    mutateGenesUsingGeneSets: 0
+    spliceGenesUsingSegments: 0
+    carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
+      type: 2}
+  - mutationPercentage: 1
+    fitPopulationPercentage: 20
+    percentageOfUnfitToReplace: 30
+    mutateGenesUsingGeneSets: 0
+    spliceGenesUsingSegments: 0
+    carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
+      type: 2}
+  - mutationPercentage: 2
+    fitPopulationPercentage: 30
+    percentageOfUnfitToReplace: 30
+    mutateGenesUsingGeneSets: 0
+    spliceGenesUsingSegments: 0
+    carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
+      type: 2}
+  - mutationPercentage: 2
+    fitPopulationPercentage: 2
+    percentageOfUnfitToReplace: 30
+    mutateGenesUsingGeneSets: 0
+    spliceGenesUsingSegments: 0
+    carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
+      type: 2}
+  - mutationPercentage: 2
+    fitPopulationPercentage: 20
+    percentageOfUnfitToReplace: 30
+    mutateGenesUsingGeneSets: 0
+    spliceGenesUsingSegments: 0
+    carPrefab: {fileID: 1850848822685460, guid: d6db502562308df45befdf33302e99c7,
+      type: 2}
+  - mutationPercentage: 2
+    fitPopulationPercentage: 20
+    percentageOfUnfitToReplace: 30
+    mutateGenesUsingGeneSets: 0
+    spliceGenesUsingSegments: 1
+    carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
+      type: 2}
+  - mutationPercentage: 2
+    fitPopulationPercentage: 20
+    percentageOfUnfitToReplace: 30
+    mutateGenesUsingGeneSets: 1
+    spliceGenesUsingSegments: 0
+    carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
+      type: 2}
+  - mutationPercentage: 2
+    fitPopulationPercentage: 20
+    percentageOfUnfitToReplace: 30
+    mutateGenesUsingGeneSets: 1
+    spliceGenesUsingSegments: 1
+    carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
+      type: 2}
+  spawnPoint: {fileID: 0}
+  carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9, type: 2}
+  numberOfCarsToSpawn: 100
+  timeScale: 3

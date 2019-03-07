@@ -88,7 +88,14 @@ public class NeuralNet : MonoBehaviour {
 				chromosome.Enqueue(geneSet);
 			}
 		}
-		return (Queue<Queue<float>>)DeepCopy.Copy(chromosome);
+
+		Queue<Queue<float>> deepCopy = new Queue<Queue<float>>();
+		foreach (Queue<float> floats in chromosome)
+		{
+			deepCopy.Enqueue((Queue<float>)DeepCopy.Copy(floats));
+		}
+
+		return deepCopy;
 	}
 
 	public void ApplyChromsome(Queue<Queue<float>> chromosome)

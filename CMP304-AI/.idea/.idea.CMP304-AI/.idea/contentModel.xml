@@ -6,6 +6,9 @@
     <e p="C:\Users\Janek\Documents\GitHub\CMP304-AI\CMP304-AI" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Resources" t="Include">
+          <e p="output.txt" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="Genetic Algorithm" t="Include">
             <e p="GenerationalMutator.cs" t="Include" />
@@ -26,6 +29,7 @@
           </e>
           <e p="Utility" t="Include">
             <e p="DeepCopy.cs" t="Include" />
+            <e p="WriteToFile.cs" t="Include" />
           </e>
         </e>
       </e>
