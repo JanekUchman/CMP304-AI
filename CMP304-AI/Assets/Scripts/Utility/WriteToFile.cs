@@ -10,6 +10,7 @@ using UnityEngine;
 public static class WriteToFile  {
 
 	private static List<string[]> rowData = new List<string[]>();
+	private static string path = "";
 	
 	public static void WriteString(string text)
 	{
@@ -28,7 +29,7 @@ public static class WriteToFile  {
 		}
 
 		//Re-import the file to update the reference in the editor
-		AssetDatabase.ImportAsset(path); 
+		//AssetDatabase.ImportAsset(path); 
 	}
 
 	public static void CreateCSV()
@@ -39,11 +40,20 @@ public static class WriteToFile  {
 		rowDataTemp[1] = "Generations";
 		rowDataTemp[2] = "Settings used";
 		rowData.Add(rowDataTemp);
+#if UNITY_EDITOR
+		path = "Assets/Resources/Test - " + DateTime.Now.ToString("yyyy-dd-M   HH-mm-ss") + ".csv";
+#else
+		path = Application.dataPath + "/Test - "+ DateTime.Now.ToString("yyyy-dd-M   HH-mm-ss") + ".csv";
+#endif
+
+		var fs = File.Create(path);
+		fs.Close();
 	}
 	
 	public static void WriteToCSV(int timeTaken, int generations, int settingsUsed)
 	{
-
+		if (path == "") CreateCSV();
+		
 		string[] rowDataTemp = new string[3];
 
 		
@@ -69,17 +79,15 @@ public static class WriteToFile  {
 			sb.AppendLine(string.Join(delimiter, output[index]));
         
         
-		string filePath = "Assets/Resources/output.csv";
-
 		try
 		{
-			StreamWriter outStream = System.IO.File.CreateText(filePath);
+			StreamWriter outStream = System.IO.File.CreateText(path);
 			outStream.WriteLine(sb);
 			outStream.Close();
 		}
 		catch (Exception e)
 		{
-			Debug.LogError("Warning file open! Please close to record results.");
+			Debug.LogError("Warning file open! Please close to record results." + e.Message);
 		}
 		
 	}

@@ -18,7 +18,6 @@ public class GenerationalMutator : MonoBehaviour
 	[SerializeField] private float fitPopulationPercentage = 10;
 	[Range(0, 50)]
 	[SerializeField] private float percentageOfUnfitToReplace = 20;
-	[SerializeField] private bool geneSetMutation;
 
 	[SerializeField] private bool mutateGenesUsingGeneSets = true;
 	[SerializeField] private bool spliceGenesUsingSegments = false;
@@ -413,6 +412,11 @@ public class GenerationalMutator : MonoBehaviour
 
 	public void SetSettings(SimulationController.MutationSettings mutationSetting)
 	{
+		if (mutationSetting.fitPopulationPercentage + mutationSetting.percentageOfUnfitToReplace > 90)
+		{
+			mutationSetting.percentageOfUnfitToReplace -=
+				(mutationSetting.fitPopulationPercentage + mutationSetting.percentageOfUnfitToReplace - 90);
+		}
 		mutationPercentage = mutationSetting.mutationPercentage;
 		fitPopulationPercentage = mutationSetting.fitPopulationPercentage;
 		percentageOfUnfitToReplace = mutationSetting.percentageOfUnfitToReplace;

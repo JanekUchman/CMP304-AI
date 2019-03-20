@@ -55,7 +55,6 @@ MonoBehaviour:
   mutationPercentage: 2
   fitPopulationPercentage: 10
   percentageOfUnfitToReplace: 20
-  geneSetMutation: 0
   mutateGenesUsingGeneSets: 0
   spliceGenesUsingSegments: 0
 --- !u!114 &114950426437422270
@@ -69,78 +68,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 843aff79f3ce97742800fc76dfb61b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingToStartOn: 0
   mutationSettings:
-  - mutationPercentage: 2
+  - mutationPercentage: 5
     fitPopulationPercentage: 20
-    percentageOfUnfitToReplace: 30
+    percentageOfUnfitToReplace: 70
     mutateGenesUsingGeneSets: 0
     spliceGenesUsingSegments: 0
     carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
       type: 2}
-  - mutationPercentage: 2
+  - mutationPercentage: 5
     fitPopulationPercentage: 20
-    percentageOfUnfitToReplace: 0
-    mutateGenesUsingGeneSets: 0
+    percentageOfUnfitToReplace: 70
+    mutateGenesUsingGeneSets: 1
     spliceGenesUsingSegments: 0
     carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
       type: 2}
   - mutationPercentage: 10
     fitPopulationPercentage: 20
-    percentageOfUnfitToReplace: 30
-    mutateGenesUsingGeneSets: 0
+    percentageOfUnfitToReplace: 70
+    mutateGenesUsingGeneSets: 1
     spliceGenesUsingSegments: 0
     carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
       type: 2}
   - mutationPercentage: 1
     fitPopulationPercentage: 20
-    percentageOfUnfitToReplace: 30
-    mutateGenesUsingGeneSets: 0
+    percentageOfUnfitToReplace: 70
+    mutateGenesUsingGeneSets: 1
     spliceGenesUsingSegments: 0
     carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
       type: 2}
   - mutationPercentage: 2
     fitPopulationPercentage: 30
-    percentageOfUnfitToReplace: 30
-    mutateGenesUsingGeneSets: 0
+    percentageOfUnfitToReplace: 70
+    mutateGenesUsingGeneSets: 1
     spliceGenesUsingSegments: 0
     carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
       type: 2}
   - mutationPercentage: 2
-    fitPopulationPercentage: 2
-    percentageOfUnfitToReplace: 30
-    mutateGenesUsingGeneSets: 0
+    fitPopulationPercentage: 4
+    percentageOfUnfitToReplace: 70
+    mutateGenesUsingGeneSets: 1
     spliceGenesUsingSegments: 0
     carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
       type: 2}
   - mutationPercentage: 2
     fitPopulationPercentage: 20
-    percentageOfUnfitToReplace: 30
-    mutateGenesUsingGeneSets: 0
+    percentageOfUnfitToReplace: 70
+    mutateGenesUsingGeneSets: 1
     spliceGenesUsingSegments: 0
     carPrefab: {fileID: 1850848822685460, guid: d6db502562308df45befdf33302e99c7,
       type: 2}
   - mutationPercentage: 2
     fitPopulationPercentage: 20
-    percentageOfUnfitToReplace: 30
-    mutateGenesUsingGeneSets: 0
+    percentageOfUnfitToReplace: 70
+    mutateGenesUsingGeneSets: 1
     spliceGenesUsingSegments: 1
     carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
       type: 2}
   - mutationPercentage: 2
     fitPopulationPercentage: 20
-    percentageOfUnfitToReplace: 30
-    mutateGenesUsingGeneSets: 1
+    percentageOfUnfitToReplace: 70
+    mutateGenesUsingGeneSets: 0
     spliceGenesUsingSegments: 0
     carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
       type: 2}
   - mutationPercentage: 2
     fitPopulationPercentage: 20
-    percentageOfUnfitToReplace: 30
-    mutateGenesUsingGeneSets: 1
+    percentageOfUnfitToReplace: 70
+    mutateGenesUsingGeneSets: 0
     spliceGenesUsingSegments: 1
     carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9,
       type: 2}
   spawnPoint: {fileID: 0}
   carPrefab: {fileID: 1270850783552846, guid: f5c4b5268f71f064a968dcefb6aa1bb9, type: 2}
-  numberOfCarsToSpawn: 100
-  timeScale: 3
+  numberOfCarsToSpawn: 50
+  timeScale: 100

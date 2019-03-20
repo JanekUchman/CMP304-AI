@@ -10,9 +10,9 @@ public class SimulationController : MonoBehaviour {
 	{
 		[Range(0, 10)]
 		public float mutationPercentage;
-		[Range(0, 30)]
+		[Range(0, 100)]
 		public float fitPopulationPercentage = 10;
-		[Range(0, 50)]
+		[Range(0, 100)]
 		public float percentageOfUnfitToReplace = 20;
 
 		public bool mutateGenesUsingGeneSets = true;
@@ -20,19 +20,20 @@ public class SimulationController : MonoBehaviour {
 		
 		public GameObject carPrefab;
 	}
-	
+
+	[SerializeField] private int settingToStartOn = 0;
 	[SerializeField] private MutationSettings[] mutationSettings;
 	
 	[SerializeField] private GameObject spawnPoint;
 	[SerializeField] private GameObject carPrefab;
 	[SerializeField] private int numberOfCarsToSpawn;
-	[Range(0.5f, 3)]
+	[Range(0.5f, 100)]
 	[SerializeField] private float timeScale =1;
 	private List<GameObject> cars = new List<GameObject>();
 	private GenerationalMutator generationalMutator;
 
 	private int numberOfCarsCrashed = 0;
-	private int successfulSimulations = 0;
+	private int currentSettingNumber = 0;
 	private int numberOfGenerations = 1;
 	private int simulationTimeTaken = 0;
 	private bool endPointHit = false;
@@ -42,38 +43,44 @@ public class SimulationController : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		currentSettingNumber = settingToStartOn;
 		Time.timeScale = timeScale;
 		generationalMutator = FindObjectOfType<GenerationalMutator>();
 		SpawnCars();
-		generationalMutator.SetSettings(mutationSettings[0]);
+		generationalMutator.SetSettings(mutationSettings[currentSettingNumber]);
 		StartCoroutine(generationalMutator.Evolve(firstGeneration: true));
 		CarMovement.CrashedWallHandler += OnCarCrash;
 		Checkpoint.EndPointHitHandler += () => endPointHit = true;
 		StartCoroutine(KeepTime());
-		WriteToFile.ClearTextFile();
-		WriteToFile.ClearCSVFile();
-		WriteToFile.CreateCSV();
 	}
 
 	private void OnEndPointHit()
 	{
-		string output = String.Format("Simulation complete! Time taken: {0}. Generations used: {1}. Settings used: {2}", simulationTimeTaken, numberOfGenerations, successfulSimulations);
+		string output = String.Format("Simulation complete! Time taken: {0}. Generations used: {1}. Settings used: {2}", simulationTimeTaken, numberOfGenerations, currentSettingNumber);
 		Debug.LogFormat(output);
 		WriteToFile.WriteString(output);
-		WriteToFile.WriteToCSV(simulationTimeTaken, numberOfGenerations, successfulSimulations);
-		successfulSimulations++;
-		if (successfulSimulations >= mutationSettings.Length) successfulSimulations = 0;
+		WriteToFile.WriteToCSV(simulationTimeTaken, numberOfGenerations, currentSettingNumber);
+		currentSettingNumber++;
+		if (currentSettingNumber >= mutationSettings.Length) currentSettingNumber = 0;
 		foreach (var car in cars)
 		{
 			Destroy(car);
 		}
 		cars.Clear();
-		carPrefab = mutationSettings[successfulSimulations].carPrefab;
-		generationalMutator.SetSettings(mutationSettings[successfulSimulations]);
+		carPrefab = mutationSettings[currentSettingNumber].carPrefab;
+		generationalMutator.SetSettings(mutationSettings[currentSettingNumber]);
 		SpawnCars();
 		StartCoroutine(generationalMutator.Evolve(firstGeneration: true));
 		ResetVariables();
 		
+	}
+
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.A))
+			Time.timeScale = 3;
+		if (Input.GetKeyDown(KeyCode.S))
+			Time.timeScale = timeScale;
 	}
 
 	private void ResetVariables()

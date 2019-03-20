@@ -40,13 +40,13 @@ public class NeuralNode : MonoBehaviour
 		//Add the node's bias on to outputs
 		output += bias;
 		//Adjust the data so we receive sensible results
-		ApplyActivationFunction(activationFunctionUsed);
+		ActivationTanH(output);
 	}
 
 	//Used for the first layer of nodes
 	public void SetInputNodeValue(float output)
 	{
-		this.output = output;
+		this.output = ActivationTanH(output);
 	}
 
 	//Get the last nodes output and weighting, sum it to ours
@@ -55,27 +55,7 @@ public class NeuralNode : MonoBehaviour
 		output += nodeConnection.inputNode.output * nodeConnection.weight;
 	}
 
-	//Switch between different types of activation functions
-	//As all nodes should use the same function, set in Neural Net
-	private void ApplyActivationFunction(ActivationFunctionTypes activationFunctionUsed)
-	{
-		switch (activationFunctionUsed)
-		{
-			case ActivationFunctionTypes.LOGISTIC_SIGMOID:
-				output= ActivationSigmoid(output);
-				break;
-			case ActivationFunctionTypes.HYPERBOLIC_TANGENT:
-				output= ActivationTanH(output);
-				break;
-		}
-	}
-
-	//Activation function sigmoid
-	private float ActivationSigmoid(float outputValue)
-	{
-		return (float)(1.0 / (1.0 + Math.Exp(-outputValue)));
-	}
-
+	
 	private float ActivationTanH(float outputValue)
 	{
 		return (float)Math.Tanh(outputValue);

@@ -1,0 +1,1310 @@
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 37. Generations used: 19. Settings used: 1
+
+Simulation complete! Time taken: 24. Generations used: 8. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 8
+
+Simulation complete! Time taken: 9. Generations used: 1. Settings used: 9
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 11. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 26. Generations used: 10. Settings used: 4
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 14. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 7. Generations used: 1. Settings used: 5
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 6
+
+Simulation complete! Time taken: 9. Generations used: 3. Settings used: 7
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 7. Generations used: 3. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 7
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 9
+
+Simulation complete! Time taken: 2. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 16. Generations used: 6. Settings used: 1
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 208. Generations used: 55. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 12. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 17. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 5
+
+Simulation complete! Time taken: 9. Generations used: 4. Settings used: 6
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 8
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 11. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 3
+
+Simulation complete! Time taken: 14. Generations used: 6. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 7. Generations used: 3. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 3. Settings used: 3
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 9
+
+Simulation complete! Time taken: 10. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 1. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 4
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 25. Generations used: 8. Settings used: 6
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 11. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 17. Generations used: 4. Settings used: 5
+
+Simulation complete! Time taken: 11. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 9
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 8. Generations used: 1. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 9. Generations used: 4. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 8. Generations used: 3. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 1
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 3
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 5
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 53. Generations used: 19. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 5
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 24. Generations used: 7. Settings used: 9
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 88. Generations used: 23. Settings used: 5
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 7. Generations used: 3. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 10. Generations used: 3. Settings used: 0
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 1
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 9. Generations used: 3. Settings used: 0
+
+Simulation complete! Time taken: 23. Generations used: 9. Settings used: 1
+
+Simulation complete! Time taken: 14. Generations used: 4. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 3
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 17. Generations used: 4. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 68. Generations used: 25. Settings used: 1
+
+Simulation complete! Time taken: 25. Generations used: 8. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 9
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 1
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 14. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 7. Generations used: 3. Settings used: 6
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 233. Generations used: 95. Settings used: 3
+
+Simulation complete! Time taken: 19. Generations used: 10. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 47. Generations used: 14. Settings used: 1
+
+Simulation complete! Time taken: 13. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 20. Generations used: 8. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 11. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 11. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 59. Generations used: 23. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 11. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 14. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 8. Generations used: 4. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 11. Generations used: 5. Settings used: 5
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 9. Generations used: 4. Settings used: 8
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 23. Generations used: 8. Settings used: 1
+
+Simulation complete! Time taken: 9. Generations used: 4. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 3
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 10. Generations used: 1. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 3. Settings used: 8
+
+Simulation complete! Time taken: 9. Generations used: 3. Settings used: 9
+
+Simulation complete! Time taken: 10. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 1. Settings used: 1
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 11. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 9. Generations used: 1. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 6. Generations used: 3. Settings used: 0
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 25. Generations used: 9. Settings used: 1
+
+Simulation complete! Time taken: 6. Generations used: 3. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 5
+
+Simulation complete! Time taken: 15. Generations used: 6. Settings used: 6
+
+Simulation complete! Time taken: 12. Generations used: 4. Settings used: 7
+
+Simulation complete! Time taken: 10. Generations used: 3. Settings used: 8
+
+Simulation complete! Time taken: 8. Generations used: 1. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 3. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 210. Generations used: 75. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 1. Settings used: 1
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 87. Generations used: 32. Settings used: 4
+
+Simulation complete! Time taken: 3. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 9. Generations used: 3. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 12. Generations used: 4. Settings used: 9
+
+Simulation complete! Time taken: 3. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 8. Generations used: 3. Settings used: 1
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 58. Generations used: 29. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 8. Generations used: 3. Settings used: 5
+
+Simulation complete! Time taken: 72. Generations used: 25. Settings used: 6
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 8. Generations used: 4. Settings used: 8
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 3
+
+Simulation complete! Time taken: 11. Generations used: 5. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 148. Generations used: 54. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 7. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 3. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 9. Generations used: 3. Settings used: 8
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 10. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 3
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 9. Generations used: 4. Settings used: 5
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 3. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 16. Generations used: 7. Settings used: 4
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 3. Settings used: 1
+
+Simulation complete! Time taken: 23. Generations used: 8. Settings used: 2
+
+Simulation complete! Time taken: 11. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 34. Generations used: 7. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 12. Generations used: 4. Settings used: 9
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 1
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 21. Generations used: 11. Settings used: 3
+
+Simulation complete! Time taken: 11. Generations used: 4. Settings used: 4
+
+Simulation complete! Time taken: 27. Generations used: 10. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 8. Generations used: 3. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 12. Generations used: 5. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 20. Generations used: 8. Settings used: 8
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 7. Generations used: 3. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 10. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 8
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 2
+
+Simulation complete! Time taken: 12. Generations used: 5. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 10. Generations used: 4. Settings used: 5
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 8. Generations used: 3. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 13. Generations used: 5. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 16. Generations used: 7. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 6. Generations used: 3. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 6. Generations used: 3. Settings used: 5
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 4
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 10. Generations used: 4. Settings used: 1
+
+Simulation complete! Time taken: 8. Generations used: 4. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 12. Generations used: 6. Settings used: 4
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 23. Generations used: 8. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 0
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 8. Generations used: 3. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 22. Generations used: 9. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 3. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 12. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 11. Generations used: 4. Settings used: 7
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 57. Generations used: 21. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 32. Generations used: 15. Settings used: 4
+
+Simulation complete! Time taken: 72. Generations used: 31. Settings used: 5
+
+Simulation complete! Time taken: 9. Generations used: 3. Settings used: 6
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 14. Generations used: 5. Settings used: 5
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 9
+
+Simulation complete! Time taken: 8. Generations used: 3. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 5
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 11. Generations used: 4. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 42. Generations used: 19. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 44. Generations used: 19. Settings used: 5
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 9. Generations used: 3. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 32. Generations used: 9. Settings used: 1
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 64. Generations used: 28. Settings used: 3
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 32. Generations used: 15. Settings used: 4
+
+Simulation complete! Time taken: 13. Generations used: 6. Settings used: 5
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 7. Generations used: 3. Settings used: 4
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 9. Generations used: 4. Settings used: 8
+
+Simulation complete! Time taken: 7. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 6. Generations used: 3. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 9. Generations used: 3. Settings used: 7
+
+Simulation complete! Time taken: 6. Generations used: 3. Settings used: 8
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 16. Generations used: 7. Settings used: 2
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 10. Generations used: 3. Settings used: 7
+
+Simulation complete! Time taken: 3. Generations used: 1. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 11. Generations used: 5. Settings used: 2
+
+Simulation complete! Time taken: 4. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 9. Generations used: 4. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 11. Generations used: 5. Settings used: 3
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+
+Simulation complete! Time taken: 9. Generations used: 2. Settings used: 6
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 7
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 8. Generations used: 3. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 6. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 7. Generations used: 1. Settings used: 3
+
+Simulation complete! Time taken: 6. Generations used: 1. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 1. Settings used: 5
+
+Simulation complete! Time taken: 98. Generations used: 36. Settings used: 6
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 7
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 8
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 9
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 0
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 1
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 2
+
+Simulation complete! Time taken: 8. Generations used: 2. Settings used: 3
+
+Simulation complete! Time taken: 4. Generations used: 1. Settings used: 4
+
+Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
+

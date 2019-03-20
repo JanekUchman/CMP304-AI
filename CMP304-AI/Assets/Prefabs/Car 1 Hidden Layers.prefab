@@ -1199,11 +1199,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlState: 1
   spinOutTime: 6.04
-  moveSpeed: 0.03
-  turnSpeed: 3
-  accelerationSpeed: 0.1
-  minSpeed: 0.03
-  maxSpeed: 0.04
+  moveSpeed: 0.06
+  turnSpeed: 8
+  accelerationSpeed: 0.2
+  minSpeed: 0.06
+  maxSpeed: 0.08
   antennas:
   - {fileID: 114797752439555152}
   - {fileID: 114143498163086368}
