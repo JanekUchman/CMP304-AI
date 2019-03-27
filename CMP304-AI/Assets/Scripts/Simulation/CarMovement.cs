@@ -62,7 +62,6 @@ public class CarMovement : MonoBehaviour {
 
 	void FixedUpdate ()
 	{
-
 		switch (controlState)
 		{
 				case ControlState.HUMAN:

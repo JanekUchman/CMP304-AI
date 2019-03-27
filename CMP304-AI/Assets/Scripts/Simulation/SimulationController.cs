@@ -35,11 +35,12 @@ public class SimulationController : MonoBehaviour {
 	private int numberOfCarsCrashed = 0;
 	private int currentSettingNumber = 0;
 	private int numberOfGenerations = 1;
-	private int simulationTimeTaken = 0;
+	private int lastSimTime = 0;
 	private bool endPointHit = false;
 
 	public delegate void SimulationRestarted();
 	public static SimulationRestarted SimulationRestartedHandler;
+	
 	// Use this for initialization
 	void Start ()
 	{
@@ -51,15 +52,15 @@ public class SimulationController : MonoBehaviour {
 		StartCoroutine(generationalMutator.Evolve(firstGeneration: true));
 		CarMovement.CrashedWallHandler += OnCarCrash;
 		Checkpoint.EndPointHitHandler += () => endPointHit = true;
-		StartCoroutine(KeepTime());
 	}
 
 	private void OnEndPointHit()
 	{
-		string output = String.Format("Simulation complete! Time taken: {0}. Generations used: {1}. Settings used: {2}", simulationTimeTaken, numberOfGenerations, currentSettingNumber);
+		string output = String.Format("Simulation complete! Time taken: {0}. Generations used: {1}. Settings used: {2}", (int)Time.timeSinceLevelLoad - lastSimTime, numberOfGenerations, currentSettingNumber);
 		Debug.LogFormat(output);
 		WriteToFile.WriteString(output);
-		WriteToFile.WriteToCSV(simulationTimeTaken, numberOfGenerations, currentSettingNumber);
+		WriteToFile.WriteToCSV((int)Time.timeSinceLevelLoad - lastSimTime, numberOfGenerations, currentSettingNumber);
+		lastSimTime = (int)Time.timeSinceLevelLoad;
 		currentSettingNumber++;
 		if (currentSettingNumber >= mutationSettings.Length) currentSettingNumber = 0;
 		foreach (var car in cars)
@@ -87,7 +88,6 @@ public class SimulationController : MonoBehaviour {
 	{
 		numberOfCarsCrashed = 0;
 		numberOfGenerations = 1;
-		simulationTimeTaken = 0;
 		endPointHit = false;
 	}
 
@@ -124,15 +124,6 @@ public class SimulationController : MonoBehaviour {
 		{
 			car.transform.position = spawnPoint.transform.position;
 			car.transform.rotation = spawnPoint.transform.rotation;
-		}
-	}
-
-	private IEnumerator KeepTime()
-	{
-		while (true)
-		{
-			yield return new WaitForSeconds(1);
-			simulationTimeTaken++;
 		}
 	}
 

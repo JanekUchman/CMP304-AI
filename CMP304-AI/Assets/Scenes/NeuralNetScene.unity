@@ -79578,7 +79578,7 @@ Prefab:
     - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
         type: 2}
       propertyPath: mutationSettings.Array.data[6].fitPopulationPercentage
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
         type: 2}
@@ -79604,6 +79604,76 @@ Prefab:
         type: 2}
       propertyPath: timeScale
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: settingToStartOn
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[2].mutateGenesUsingGeneSets
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[3].mutateGenesUsingGeneSets
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[4].mutateGenesUsingGeneSets
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[5].mutateGenesUsingGeneSets
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[6].mutateGenesUsingGeneSets
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[1].mutateGenesUsingGeneSets
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[3].mutationPercentage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[4].mutationPercentage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[5].mutationPercentage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[6].mutationPercentage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[7].mutationPercentage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[8].mutationPercentage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114950426437422270, guid: 4409f2422b4ff474a9c5e52f8c8a6985,
+        type: 2}
+      propertyPath: mutationSettings.Array.data[9].mutationPercentage
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4409f2422b4ff474a9c5e52f8c8a6985, type: 2}

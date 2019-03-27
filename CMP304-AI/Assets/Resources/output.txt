@@ -1308,3 +1308,21 @@ Simulation complete! Time taken: 4. Generations used: 1. Settings used: 4
 
 Simulation complete! Time taken: 5. Generations used: 2. Settings used: 5
 
+Simulation complete! Time taken: 5400. Generations used: 1423. Settings used: 0
+
+Simulation complete! Time taken: 2216. Generations used: 12. Settings used: 1
+
+Simulation complete! Time taken: 338. Generations used: 3. Settings used: 2
+
+Simulation complete! Time taken: 246. Generations used: 3. Settings used: 3
+
+Simulation complete! Time taken: 774. Generations used: 5. Settings used: 4
+
+Simulation complete! Time taken: 469. Generations used: 3. Settings used: 5
+
+Simulation complete! Time taken: 6344. Generations used: 58. Settings used: 2
+
+Simulation complete! Time taken: 218613. Generations used: 1373. Settings used: 1
+
+Simulation complete! Time taken: 784661. Generations used: 1976. Settings used: 2
+
